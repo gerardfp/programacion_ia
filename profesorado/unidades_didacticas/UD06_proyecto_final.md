@@ -12,11 +12,59 @@
 - Evaluar la capacidad de integración del alumnado reuniendo todos los aprendizajes del módulo: desarrollo profesional en Python con `uv`, consumo de LLMs locales con Ollama, RAG con ChromaDB, herramientas con agentes, APIs con FastAPI y contenerización con Docker Compose.
 - Guiar en la redacción de la memoria técnica y el análisis de aspectos éticos, de privacidad local (GDPR) y seguridad.
 
-### Secuencia de Sesiones (20 horas)
-1. **Sesión 1-4 (4h):** Análisis de requisitos, diseño de arquitectura y aprobación de propuestas.
-2. **Sesión 5-12 (8h):** Desarrollo de componentes backend, base vectorial, API y pruebas unitarias con `uv run pytest`.
-3. **Sesión 13-16 (4h):** Contenerización total en Docker Compose y smoke testing local.
-4. **Sesión 17-20 (4h):** Elaboración de memoria técnica y defensa pública del proyecto.
+---
+
+### 🛠️ Preparación e Infraestructura Necesaria
+
+- **Entorno de Despliegue de Stacks:** Servidor Linux con Docker Compose listo para hospedar las demostraciones de los proyectos finales si se opta por despliegue centralizado.
+- **Servidor de Repositorios (GitLab / Gitea):** Plataforma para la entrega de los repositorios finales con etiquetado de versión `v1.0.0`.
+- **Cañón de Proyección / Proyector de Aula:** Preparado para las sesiones de defensa pública de proyectos.
+
+---
+
+### ⏱️ Secuencia y Desarrollo Detallado de las Sesiones (20 horas)
+
+#### **Sesión 1-4 (4 horas): Propuesta de Caso de Uso y Diseño de Arquitectura**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 1:* Presentación del Proyecto Empresarial (Problema de negocio planteado).
+  - *Diapositiva 2:* Arquitectura del Sistema (Componentes: FastAPI, Ollama, ChromaDB, Docker Compose).
+- **Material Teórico:** Secciones 1 y 2 de `alumnado/unidades_didacticas/UD06_proyecto_final/UD06_01_material.md`.
+- **Desarrollo de la Sesión:**
+  1. Definición del alcance del proyecto (ej. Asistente Documental de Soporte Técnico, Agente Auditor de BDs).
+  2. **Actividad a realizar:** `UD06_03_actividad_inicial.md` (Redacción del anteproyecto, diagrama de arquitectura y aprobación por parte del docente).
+
+#### **Sesión 5-12 (8 horas): Desarrollo Backend, Base Vectorial y Testing con `uv`**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 3:* Calidad de código y gestión de dependencias con `uv` (`pyproject.toml` + `uv.lock`).
+- **Material Teórico:** Sección 3 del material del alumno.
+- **Desarrollo de la Sesión:**
+  1. Trabajo práctico intensivo en parejas o individualmente.
+  2. **Práctica Guiada / Trabajo de Campo:** Desarrollo guiado mediante `UD06_04_practica_guiada.md` y `UD06_05_practica_autonoma.md`.
+  3. Ejecución continua de pruebas automáticas con `uv run pytest`.
+
+#### **Sesión 13-16 (4 horas): Contenerización Total, Interfaz y Smoke Testing**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 4:* Demostración en vivo (Live Demo): Inferencia local, RAG y ejecución de herramientas.
+- **Material Teórico:** Sección 4 del material del alumno.
+- **Desarrollo de la Sesión:**
+  1. Construcción del archivo `compose.yaml` integrando backend FastAPI, base vectorial ChromaDB e interfaz frontend Streamlit.
+  2. **Reto / Puesta a Punto:** `UD06_06_reto_ampliacion.md` (Verificación de resiliencia, logs de auditoría e interfaz visual limpia).
+
+#### **Sesión 17-20 (4 horas): Memoria Técnica y Defensa Pública del Proyecto**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 5:* Evaluación de seguridad, privacidad local (GDPR) y conclusiones técnicas.
+- **Desarrollo de la Sesión:**
+  1. Entrega de la memoria técnica y repositorio Git etiquetado.
+  2. **Defensa Oral Pública (15 min por alumno/equipo):** Exposición apoyada en las diapositivas Marp y demostración funcional en vivo.
+  3. Evaluación por parte del profesorado utilizando la rúbrica oficial frente al proyecto de referencia en `profesorado/soluciones/UD06_proyecto_final/`.
+
+---
+
+### ⚠️ Errores Frecuentes del Alumnado
+- Intentar abarcar un caso de uso excesivamente amplio en lugar de centrarse en un producto mínimo viable (MVP) sólido.
+- No incluir el archivo de bloqueo `uv.lock` en la entrega, provocando inconsistencias en las versiones de dependencias durante la corrección.
+- Dejar rutas absolutas locales en los scripts que impiden la ejecución en el servidor del profesor.
+- Omitir el análisis de aspectos éticos, de protección de datos (GDPR) o de seguridad en la memoria técnica.
 
 ---
 
@@ -43,4 +91,4 @@
 
 ## 💻 Solución del Proyecto
 La solución ejecutable completa de esta unidad se encuentra disponible en:
-`profesorado/soluciones/UD06_proyecto_final/`
+[profesorado/soluciones/UD06_proyecto_final/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD06_proyecto_final)

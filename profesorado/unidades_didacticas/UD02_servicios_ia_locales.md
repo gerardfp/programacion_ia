@@ -10,19 +10,70 @@
 
 ### Objetivos Didácticos
 - Comprender la arquitectura cliente-servidor de servicios de inferencia local como Ollama.
-- Desarrollar clientes en Python utilizando gestores de proyectos modernos (`uv`, `httpx` / `urllib`) para invocar modelos `llama3.2` o `qwen2.5`.
-- Exigir salida estructurada en formato JSON mediante la especificación de esquemas y prompt engineering.
+- Desarrollar clientes en Python utilizando gestores de proyectos modernos (`uv`, `httpx`) para invocar modelos `llama3.2` o `qwen2.5`.
+- Exigir salida estructurada en formato JSON mediante la especificación de esquemas Pydantic y prompt engineering.
 - Medir rendimiento: tokens por segundo, tiempo hasta primer token (TTFT) y latencia total.
 
-### Infraestructura Preparada
-El profesorado desplegará un contenedor Ollama en la red local del centro para que el alumnado pueda realizar las primeras pruebas sin necesidad de descargar modelos pesados individualmente en sus equipos.
+---
 
-### Secuencia de Sesiones (15 horas)
-1. **Sesión 1-2 (3h):** Arquitectura cliente-servidor de LLMs locales. Endpoints `/api/generate` y `/api/chat`.
-2. **Sesión 3-4 (3h):** Creación del proyecto cliente con `uv init` y gestión de dependencias HTTP.
-3. **Sesión 5-6 (3h):** Prompting estructurado y forzado de salida JSON (`format: "json"`).
-4. **Sesión 7-8 (3h):** Benchmark de modelos locales: medición de latencia y consumo de RAM/GPU.
-5. **Sesión 9-10 (3h):** Implementación de streaming y gestión de timeouts/reintentos.
+### 🛠️ Preparación e Infraestructura Necesaria
+
+- **Servicio de Inferencia Ollama:** Desplegado mediante Docker Compose o servicio de sistema en la IP del aula (ej. `http://192.168.1.100:11434`).
+- **Modelos pre-descargados:** 
+  - `ollama pull llama3.2:3b` (modelo por defecto ligero).
+  - `ollama pull qwen2.5:3b` (para benchmarking comparativo).
+- **Red Local:** Puerto `11434` accesible para todos los puestos de alumnos. Variable de entorno configurada `OLLAMA_HOST=0.0.0.0`.
+
+---
+
+### ⏱️ Secuencia y Desarrollo Detallado de las Sesiones (15 horas)
+
+#### **Sesión 1-2 (3 horas): Inferencia Local vs Nube y Arquitectura Ollama**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 1:* Inferencia Local vs Nube (Privacidad, coste cero por token y control total).
+  - *Diapositiva 2:* Arquitectura de Ollama (API REST, gestión de modelos `pull` / `run`).
+- **Material Teórico:** Secciones 1 y 2 de `alumnado/unidades_didacticas/UD02_servicios_ia_locales/UD02_01_material.md`.
+- **Desarrollo de la Sesión:**
+  1. Presentación de las ventajas de la inferencia local en centros educativos y empresas.
+  2. Demostración interactiva en consola invocando la API de Ollama mediante `curl` al servidor del centro.
+  3. **Actividad a realizar:** `UD02_03_actividad_inicial.md` (Exploración de la API de Ollama y envío de peticiones `/api/generate` manuales).
+
+#### **Sesión 3-4 (3 horas): Cliente Python Asíncrono con `uv` y `httpx`**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 3:* Consumo de la API de Ollama desde Python gestionado con `uv`.
+- **Material Teórico:** Sección 3 del material del alumno.
+- **Desarrollo de la Sesión:**
+  1. Explicación del consumo programático con `httpx` (manejo de timeouts y peticiones POST).
+  2. **Práctica Guiada (Parte 1):** Inicio de `UD02_04_practica_guiada.md` utilizando el esqueleto `starter/`. Construcción de la clase `OllamaClient`.
+
+#### **Sesión 5-6 (3 horas): Respuestas Estructuradas con Modo JSON y Pydantic**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 4:* Respuestas estructuradas (JSON Mode) y validación inmediata con Pydantic.
+- **Material Teórico:** Sección 4 del material del alumno.
+- **Desarrollo de la Sesión:**
+  1. Explicación de la propiedad `"format": "json"` en las peticiones a Ollama y forzado de esquemas.
+  2. **Práctica Guiada (Parte 2):** Completar `UD02_04_practica_guiada.md`. Parseo automático de la respuesta JSON a modelos de Pydantic.
+
+#### **Sesión 7-8 (3 horas): Benchmarking de Rendimiento y Medición de Métricas**
+- **Diapositivas a proyectar:** 
+  - *Diapositiva 5:* Rendimiento y métricas: Tokens por segundo (TTFT, VRAM, consumo CPU/GPU).
+- **Material Teórico:** Sección 5 del material del alumno.
+- **Desarrollo de la Sesión:**
+  1. Explicación del cálculo de tokens/segundo analizando los metadatos de respuesta (`eval_count` / `eval_duration`).
+  2. **Práctica Autónoma:** Desarrollo de `UD02_05_practica_autonoma.md` (Creación de un validador y benchmark de inferencia local).
+
+#### **Sesión 9-10 (3 horas): Resiliencia, Reto de Ampliación y Evaluación**
+- **Desarrollo de la Sesión:**
+  1. **Reto de Ampliación:** Trabajo en `UD02_06_reto_ampliacion.md` (Implementación de reintentos automáticos con backoff exponencial e interfaz CLI de consulta).
+  2. Evaluación de las entregas en Git frente a la solución de referencia en `profesorado/soluciones/UD02_servicios_ia_locales/`.
+
+---
+
+### ⚠️ Errores Frecuentes del Alumnado
+- No configurar un timeout adecuado en `httpx` (causando bloqueos por defecto a los 5 segundos).
+- Intentar parsear respuestas sin haber enviado `"format": "json"` en la petición a Ollama.
+- No controlar las excepciones de conexión (`httpx.ConnectError`) cuando el servidor Ollama se reinicia.
+- Confundir tokens por segundo del prompt (*prompt_eval*) con tokens por segundo de respuesta (*eval_count*).
 
 ---
 
@@ -47,4 +98,4 @@ El profesorado desplegará un contenedor Ollama en la red local del centro para 
 
 ## 💻 Solución del Proyecto
 La solución ejecutable completa de esta unidad se encuentra disponible en:
-`profesorado/soluciones/UD02_servicios_ia_locales/`
+[profesorado/soluciones/UD02_servicios_ia_locales/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD02_servicios_ia_locales)

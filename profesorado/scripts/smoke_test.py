@@ -15,21 +15,22 @@ def main():
     root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     
     unidades = [
-        "UD01_python_profesional",
-        "UD02_servicios_ia_locales",
-        "UD03_aplicaciones_rag",
-        "UD04_agentes_inteligentes",
-        "UD05_apis_y_despliegue",
-        "UD06_proyecto_final"
+        ("UD01_python_profesional", "UD01"),
+        ("UD02_servicios_ia_locales", "UD02"),
+        ("UD03_aplicaciones_rag", "UD03"),
+        ("UD04_agentes_inteligentes", "UD04"),
+        ("UD05_apis_y_despliegue", "UD05"),
+        ("UD06_proyecto_final", "UD06")
     ]
 
     docs_alumnado = [
-        "02_material_alumno.md",
-        "03_presentacion.md",
-        "04_actividad_inicial.md",
-        "05_practica_guiada.md",
-        "06_practica_autonoma.md",
-        "07_reto_ampliacion.md"
+        "00_preparacion.md",
+        "01_material.md",
+        "02_presentacion.md",
+        "03_actividad_inicial.md",
+        "04_practica_guiada.md",
+        "05_practica_autonoma.md",
+        "06_reto_ampliacion.md"
     ]
 
     errores = 0
@@ -51,28 +52,29 @@ def main():
             errores += 1
 
     print("\n2. Verificando documentos del ALUMNADO por cada Unidad Didáctica...")
-    for ud in unidades:
-        print(f"\n -> [Alumnado] Comprobando {ud}:")
+    for ud_folder, prefix in unidades:
+        print(f"\n -> [Alumnado] Comprobando {ud_folder}:")
         for doc in docs_alumnado:
-            file_path = os.path.join(root_dir, "alumnado", "unidades_didacticas", ud, doc)
+            doc_filename = f"{prefix}_{doc}"
+            file_path = os.path.join(root_dir, "alumnado", "unidades_didacticas", ud_folder, doc_filename)
             if not check_file_exists(file_path):
                 errores += 1
 
     print("\n3. Verificando documentos unificados Markdown del PROFESORADO...")
-    for ud in unidades:
-        file_path = os.path.join(root_dir, "profesorado", "unidades_didacticas", f"{ud}.md")
+    for ud_folder, _ in unidades:
+        file_path = os.path.join(root_dir, "profesorado", "unidades_didacticas", f"{ud_folder}.md")
         if not check_file_exists(file_path):
             errores += 1
 
     print("\n4. Verificando presencia de carpetas de SOLUCIONES del PROFESORADO...")
-    for ud in unidades:
-        sol_path = os.path.join(root_dir, "profesorado", "soluciones", ud)
+    for ud_folder, _ in unidades:
+        sol_path = os.path.join(root_dir, "profesorado", "soluciones", ud_folder)
         if not check_file_exists(sol_path):
             errores += 1
 
     print("\n------------------------------------------------------------")
     if errores == 0:
-        print("VERIFICACIÓN EXITOSA: La estructura unificada de profesorado (unidades.md + soluciones/) está íntegra.")
+        print("VERIFICACIÓN EXITOSA: Todos los ficheros (incluyendo 00_preparacion.md) están íntegros.")
         sys.exit(0)
     else:
         print(f"VERIFICACIÓN FALLIDA: Se encontraron {errores} ausencias.")

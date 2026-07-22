@@ -23,28 +23,30 @@ alumnado/
 
 ---
 
-## 📄 Contenido de cada Unidad Didáctica
+## 📄 Nomenclatura de Contenidos por Unidad Didáctica
 
-Dentro de cada carpeta de unidad didáctica (`UDXX`) dispones de los siguientes documentos y carpetas:
+Dentro de cada carpeta de unidad didáctica (`UDXX_...`) dispones de los siguientes 7 documentos numerados:
 
-- `02_material_alumno.md`: Guía de teoría y conceptos clave de la unidad.
-- `03_presentacion.md`: Resumen y diapositivas de la unidad.
-- `04_actividad_inicial.md`: Ejercicio de activación y toma de contacto.
-- `05_practica_guiada.md`: Tutorial paso a paso guiado por el profesorado.
-- `06_practica_autonoma.md`: Enunciado del trabajo práctico individual o en parejas.
-- `07_reto_ampliacion.md`: Ejercicio opcional de profundización para ampliar nota.
+- `UDXX_00_preparacion.md`: Requisitos previos de software, hardware e infraestructura necesaria.
+- `UDXX_01_material.md`: Guía de teoría y conceptos clave de la unidad.
+- `UDXX_02_presentacion.md`: Diapositivas de la unidad en formato Marp.
+- `UDXX_03_actividad_inicial.md`: Ejercicio de activación y toma de contacto.
+- `UDXX_04_practica_guiada.md`: Tutorial paso a paso guiado por el profesorado.
+- `UDXX_05_practica_autonoma.md`: Enunciado del trabajo práctico individual o en parejas.
+- `UDXX_06_reto_ampliacion.md`: Ejercicio opcional de profundización para ampliar nota.
 - `starter/`: Esqueleto de código inicial o plantilla para comenzar las prácticas con `uv`.
 
 ---
 
 ## 🚀 Cómo empezar una práctica
 
-1. Navega a la unidad correspondiente (ej. `alumnado/unidades_didacticas/UD01_python_profesional/starter`).
-2. Crea tu entorno e instala dependencias con `uv`:
+1. Consulta primero `UDXX_00_preparacion.md` para verificar que tu equipo e infraestructura cumplen los requisitos.
+2. Navega a la unidad correspondiente (ej. `alumnado/unidades_didacticas/UD01_python_profesional/starter`).
+3. Crea tu entorno e instala dependencias con `uv`:
    ```bash
    uv sync
    ```
-3. Ejecuta tus scripts o pruebas utilizando `uv run`:
+4. Ejecuta tus scripts o pruebas utilizando `uv run`:
    ```bash
    uv run pytest
    ```
