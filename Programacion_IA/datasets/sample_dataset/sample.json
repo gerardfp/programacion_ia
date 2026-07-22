@@ -1,0 +1,20 @@
+[
+  {
+    "id": "doc_01",
+    "titulo": "Configuración de Red Ollama",
+    "contenido": "El puerto por defecto de la API HTTP de Ollama es el 11434. Se recomienda configurar OLLAMA_HOST=0.0.0.0 para escuchar en todas las interfaces de red del servidor.",
+    "categoria": "redes"
+  },
+  {
+    "id": "doc_02",
+    "titulo": "Persistencia en PostgreSQL",
+    "contenido": "PostgreSQL utiliza el puerto 5432. Para almacenar vectores mediante pgvector se requiere instalar la extensión 'CREATE EXTENSION vector;'.",
+    "categoria": "base_datos"
+  },
+  {
+    "id": "doc_03",
+    "titulo": "Límites de Recursos Docker",
+    "contenido": "Para limitar el uso de memoria en Docker Compose se puede emplear 'deploy.resources.limits.memory: 4g' en la definición del servicio.",
+    "categoria": "docker"
+  }
+]

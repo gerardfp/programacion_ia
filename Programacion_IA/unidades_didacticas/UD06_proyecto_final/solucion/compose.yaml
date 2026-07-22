@@ -1,0 +1,33 @@
+name: proyecto-final-ia-local
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - CHROMA_HOST=chroma
+    depends_on:
+      - ollama
+      - chroma
+    networks:
+      - red-proyecto
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    networks:
+      - red-proyecto
+
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000"
+    networks:
+      - red-proyecto
+
+networks:
+  red-proyecto:
+    driver: bridge

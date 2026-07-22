@@ -1,0 +1,36 @@
+name: infra-profesor-ia
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: profesor_ollama
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    networks:
+      - infra_net
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: profesor_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ia_db}
+      POSTGRES_USER: ${POSTGRES_USER:-profesor}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-profesor_secret}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - infra_net
+
+networks:
+  infra_net:
+    driver: bridge
+
+volumes:
+  ollama_data:
+  postgres_data:

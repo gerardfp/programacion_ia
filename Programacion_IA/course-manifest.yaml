@@ -1,0 +1,45 @@
+curso: "2026-2027"
+modulo:
+  nombre: "Programación de Inteligencia Artificial"
+  codigo: "5073"
+  duracion_horas: 110
+  enfoque: "local-first, software libre, ABP, infraestructura del centro"
+
+tecnologias_principales:
+  lenguaje: "Python 3.11+"
+  gestor_proyectos: "uv (pyproject.toml + uv.lock)"
+  framework_api: "FastAPI"
+  base_datos_relacional: "PostgreSQL 16"
+  base_datos_vectorial: "ChromaDB"
+  servicios_llm_local: "Ollama"
+  modelo_llm_defecto: "llama3.2:3b"
+  modelo_embeddings: "sentence-transformers/all-MiniLM-L6-v2"
+  despliegue: "Docker Compose"
+  frontend_demo: "Streamlit"
+  testing: "pytest"
+
+resultados_aprendizaje:
+  - id: "RA1"
+    descripcion: "Caracteriza lenguajes de programación y entornos de desarrollo para IA."
+    horas: 15
+  - id: "RA2"
+    descripcion: "Integra y consume servicios y modelos locales de IA."
+    horas: 15
+  - id: "RA3"
+    descripcion: "Desarrolla aplicaciones RAG (Retrieval-Augmented Generation) locales."
+    horas: 25
+  - id: "RA4"
+    descripcion: "Construye agentes inteligentes con ejecución de herramientas y automatización."
+    horas: 15
+  - id: "RA5"
+    descripcion: "Publica, conteneriza y monitoriza APIs y servicios de IA."
+    horas: 20
+  - id: "RA6"
+    descripcion: "Desarrolla e integra un proyecto final empresarial de IA."
+    horas: 20
+
+restricciones:
+  servicios_pago: false
+  cuentas_externas: false
+  datos_fuera_del_centro: false
+  prioridad_software_libre: true

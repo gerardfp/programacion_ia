@@ -1,0 +1,20 @@
+# Unidad Didáctica 5: APIs, Contenedores y Operación
+
+**Duración:** 20 horas  
+**Resultado de Aprendizaje:** RA5 - Publica, conteneriza y monitoriza APIs y servicios de IA.
+
+---
+
+## ÍNDICE DE CONTENIDOS DE LA UNIDAD
+
+1. [Guía para el Profesorado](01_guia_profesor.md)
+2. [Material Teórico del Alumnado](02_material_alumno.md)
+3. [Guion de Presentación](03_presentacion.md)
+4. [Actividad Inicial: Inspección de Documentación OpenAPI en FastAPI](04_actividad_inicial.md)
+5. [Práctica Guiada: API REST de inferencia con FastAPI y `uv`](05_practica_guiada.md)
+6. [Práctica Autónoma: Contenerización profesional con Dockerfile y `uv`](06_practica_autonoma.md)
+7. [Reto de Ampliación: Stack Multi-Servicio con Docker Compose y Healthchecks](07_reto_ampliacion.md)
+8. [Criterios e Instrumentos de Evaluación](08_evaluacion.md)
+9. [Rúbrica de la Unidad](09_rubrica.md)
+10. [Código Starter](starter/)
+11. [Código Solución (Profesorado)](solucion/)
