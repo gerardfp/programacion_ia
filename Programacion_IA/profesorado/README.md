@@ -18,13 +18,20 @@ profesorado/
 ├── infraestructura/               # Servicios base para el aula
 │   └── profesor/                  # Docker Compose con Ollama, Postgres, etc.
 ├── scripts/                       # Scripts de mantenimiento y smoke tests
-└── unidades_didacticas/           # Recursos didácticos del docente
-    └── UDXX_nombre/
-        ├── 00_indice.md           # Índice y resumen docente
-        ├── 01_guia_profesor.md    # Orientaciones metodológicas y andamiaje
-        ├── 08_evaluacion.md       # Instrumentos e instrucciones de evaluación
-        ├── 09_rubrica.md          # Rúbricas analíticas de evaluación
-        └── solucion/              # Solución funcional completa de los retos y prácticas
+├── soluciones/                    # 💻 Soluciones completas de cada unidad
+│   ├── UD01_python_profesional/   # Solución ejecutable UD01
+│   ├── UD02_servicios_ia_locales/ # Solución ejecutable UD02
+│   ├── UD03_aplicaciones_rag/     # Solución ejecutable UD03
+│   ├── UD04_agentes_inteligentes/ # Solución ejecutable UD04
+│   ├── UD05_apis_y_despliegue/     # Solución ejecutable UD05
+│   └── UD06_proyecto_final/       # Solución ejecutable UD06
+└── unidades_didacticas/           # 📄 Ficheros Markdown unificados por unidad
+    ├── UD01_python_profesional.md # Guía, Evaluación y Rúbrica de la UD01
+    ├── UD02_servicios_ia_locales.md # Guía, Evaluación y Rúbrica de la UD02
+    ├── UD03_aplicaciones_rag.md   # Guía, Evaluación y Rúbrica de la UD03
+    ├── UD04_agentes_inteligentes.md # Guía, Evaluación y Rúbrica de la UD04
+    ├── UD05_apis_y_despliegue.md   # Guía, Evaluación y Rúbrica de la UD05
+    └── UD06_proyecto_final.md     # Guía, Evaluación y Rúbrica de la UD06
 ```
 
 ---
@@ -46,5 +53,5 @@ docker compose up -d
 Para verificar que todos los servicios y soluciones están operativos, ejecuta el script de comprobación:
 
 ```bash
-uv run python profesorado/scripts/smoke_test.py
+python profesorado/scripts/smoke_test.py
 ```

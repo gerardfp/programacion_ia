@@ -32,13 +32,6 @@ def main():
         "07_reto_ampliacion.md"
     ]
 
-    docs_profesorado = [
-        "00_indice.md",
-        "01_guia_profesor.md",
-        "08_evaluacion.md",
-        "09_rubrica.md"
-    ]
-
     errores = 0
 
     print("\n1. Verificando documentos macro y raíces...")
@@ -65,17 +58,21 @@ def main():
             if not check_file_exists(file_path):
                 errores += 1
 
-    print("\n3. Verificando documentos del PROFESORADO por cada Unidad Didáctica...")
+    print("\n3. Verificando documentos unificados Markdown del PROFESORADO...")
     for ud in unidades:
-        print(f"\n -> [Profesorado] Comprobando {ud}:")
-        for doc in docs_profesorado:
-            file_path = os.path.join(root_dir, "profesorado", "unidades_didacticas", ud, doc)
-            if not check_file_exists(file_path):
-                errores += 1
+        file_path = os.path.join(root_dir, "profesorado", "unidades_didacticas", f"{ud}.md")
+        if not check_file_exists(file_path):
+            errores += 1
+
+    print("\n4. Verificando presencia de carpetas de SOLUCIONES del PROFESORADO...")
+    for ud in unidades:
+        sol_path = os.path.join(root_dir, "profesorado", "soluciones", ud)
+        if not check_file_exists(sol_path):
+            errores += 1
 
     print("\n------------------------------------------------------------")
     if errores == 0:
-        print("VERIFICACIÓN EXITOSA: La estructura dual (alumnado/profesorado) está íntegra y completa.")
+        print("VERIFICACIÓN EXITOSA: La estructura unificada de profesorado (unidades.md + soluciones/) está íntegra.")
         sys.exit(0)
     else:
         print(f"VERIFICACIÓN FALLIDA: Se encontraron {errores} ausencias.")

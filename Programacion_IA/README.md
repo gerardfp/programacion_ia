@@ -42,13 +42,20 @@ Programacion_IA/
     ├── programacion_docente/          # Documentación oficial (RA, CE, temporalización)
     ├── infraestructura/               # Despliegue base del centro (Ollama, DBs, Docker Compose)
     ├── scripts/                       # Scripts de mantenimiento y pruebas
-    └── unidades_didacticas/           # Unidades UD01 a UD06 (Guías, Evaluaciones, Soluciones)
-        ├── UD01_python_profesional/
-        ├── UD02_servicios_ia_locales/
-        ├── UD03_aplicaciones_rag/
-        ├── UD04_agentes_inteligentes/
-        ├── UD05_apis_y_despliegue/
-        └── UD06_proyecto_final/
+    ├── soluciones/                    # Proyectos solución independientes por unidad
+    │   ├── UD01_python_profesional/
+    │   ├── UD02_servicios_ia_locales/
+    │   ├── UD03_aplicaciones_rag/
+    │   ├── UD04_agentes_inteligentes/
+    │   ├── UD05_apis_y_despliegue/
+    │   └── UD06_proyecto_final/
+    └── unidades_didacticas/           # Ficheros Markdown unificados por unidad (Guía+Eval+Rúbrica)
+        ├── UD01_python_profesional.md
+        ├── UD02_servicios_ia_locales.md
+        ├── UD03_aplicaciones_rag.md
+        ├── UD04_agentes_inteligentes.md
+        ├── UD05_apis_y_despliegue.md
+        └── UD06_proyecto_final.md
 ```
 
 ---

@@ -10,7 +10,8 @@ rutas_estructurales:
   datasets_alumnado: "alumnado/datasets"
   programacion_docente: "profesorado/programacion_docente"
   infraestructura_docente: "profesorado/infraestructura"
-  recursos_evaluacion_profesor: "profesorado/unidades_didacticas"
+  guias_evaluacion_profesor: "profesorado/unidades_didacticas"
+  soluciones_profesor: "profesorado/soluciones"
 
 tecnologias_principales:
   lenguaje: "Python 3.11+"
