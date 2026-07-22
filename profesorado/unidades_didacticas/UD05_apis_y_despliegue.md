@@ -92,6 +92,9 @@
 
 ---
 
-## 💻 Solución del Proyecto
-La solución ejecutable completa de esta unidad se encuentra disponible en:
-[profesorado/soluciones/UD05_apis_y_despliegue/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD05_apis_y_despliegue)
+## 💻 Soluciones de las Actividades
+Las soluciones ejecutables de esta unidad se encuentran dentro de la carpeta [profesorado/soluciones/UD05_apis_y_despliegue/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD05_apis_y_despliegue) organizadas por actividad:
+- **Actividad Inicial:** [profesorado/soluciones/UD05_apis_y_despliegue/UD05_03_actividad_inicial/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD05_apis_y_despliegue/UD05_03_actividad_inicial)
+- **Práctica Guiada:** [profesorado/soluciones/UD05_apis_y_despliegue/UD05_04_practica_guiada/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD05_apis_y_despliegue/UD05_04_practica_guiada)
+- **Práctica Autónoma:** [profesorado/soluciones/UD05_apis_y_despliegue/UD05_05_practica_autonoma/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD05_apis_y_despliegue/UD05_05_practica_autonoma)
+- **Reto de Ampliación:** [profesorado/soluciones/UD05_apis_y_despliegue/UD05_06_reto_ampliacion/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD05_apis_y_despliegue/UD05_06_reto_ampliacion)

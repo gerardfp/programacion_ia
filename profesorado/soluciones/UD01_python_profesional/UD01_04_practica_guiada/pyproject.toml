@@ -1,0 +1,12 @@
+[project]
+name = "ia-utils"
+version = "0.1.0"
+description = "Librería de utilidades para desarrollo en IA"
+dependencies = [
+    "pydantic>=2.0.0",
+    "requests>=2.31.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

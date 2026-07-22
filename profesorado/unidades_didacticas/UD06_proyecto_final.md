@@ -89,6 +89,9 @@
 
 ---
 
-## 💻 Solución del Proyecto
-La solución ejecutable completa de esta unidad se encuentra disponible en:
-[profesorado/soluciones/UD06_proyecto_final/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD06_proyecto_final)
+## 💻 Soluciones de las Actividades
+Las soluciones ejecutables de esta unidad se encuentran dentro de la carpeta [profesorado/soluciones/UD06_proyecto_final/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD06_proyecto_final) organizadas por actividad:
+- **Actividad Inicial:** [profesorado/soluciones/UD06_proyecto_final/UD06_03_actividad_inicial/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD06_proyecto_final/UD06_03_actividad_inicial)
+- **Práctica Guiada:** [profesorado/soluciones/UD06_proyecto_final/UD06_04_practica_guiada/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD06_proyecto_final/UD06_04_practica_guiada)
+- **Práctica Autónoma:** [profesorado/soluciones/UD06_proyecto_final/UD06_05_practica_autonoma/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD06_proyecto_final/UD06_05_practica_autonoma)
+- **Reto de Ampliación:** [profesorado/soluciones/UD06_proyecto_final/UD06_06_reto_ampliacion/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD06_proyecto_final/UD06_06_reto_ampliacion)

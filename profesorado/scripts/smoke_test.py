@@ -11,7 +11,7 @@ def check_file_exists(path: str) -> bool:
         return False
 
 def main():
-    print("--- INICIANDO VERIFICACIÓN COMPLETA DE ESTRUCTURA DUAL EN PROGRAMACION_IA ---")
+    print("--- INICIANDO VERIFICACIÓN COMPLETA DE ESTRUCTURA EN PROGRAMACION_IA ---")
     root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     
     unidades = [
@@ -31,6 +31,13 @@ def main():
         "04_practica_guiada.md",
         "05_practica_autonoma.md",
         "06_reto_ampliacion.md"
+    ]
+
+    actividades_soluciones = [
+        "03_actividad_inicial",
+        "04_practica_guiada",
+        "05_practica_autonoma",
+        "06_reto_ampliacion"
     ]
 
     errores = 0
@@ -66,15 +73,18 @@ def main():
         if not check_file_exists(file_path):
             errores += 1
 
-    print("\n4. Verificando presencia de carpetas de SOLUCIONES del PROFESORADO...")
-    for ud_folder, _ in unidades:
-        sol_path = os.path.join(root_dir, "profesorado", "soluciones", ud_folder)
-        if not check_file_exists(sol_path):
-            errores += 1
+    print("\n4. Verificando carpetas de SOLUCIONES por UNIDAD y CÓDIGO DE ACTIVIDAD...")
+    for ud_folder, prefix in unidades:
+        print(f"\n -> [Soluciones] Comprobando {ud_folder}:")
+        for act in actividades_soluciones:
+            act_folder = f"{prefix}_{act}"
+            sol_path = os.path.join(root_dir, "profesorado", "soluciones", ud_folder, act_folder)
+            if not check_file_exists(sol_path):
+                errores += 1
 
     print("\n------------------------------------------------------------")
     if errores == 0:
-        print("VERIFICACIÓN EXITOSA: Todos los ficheros (incluyendo 00_preparacion.md) están íntegros.")
+        print("VERIFICACIÓN EXITOSA: Todas las carpetas de soluciones por actividad (profesorado/soluciones/UDXX_.../UDXX_YY_...) están íntegras.")
         sys.exit(0)
     else:
         print(f"VERIFICACIÓN FALLIDA: Se encontraron {errores} ausencias.")

@@ -101,6 +101,9 @@
 
 ---
 
-## 💻 Solución del Proyecto
-La solución ejecutable completa de esta unidad se encuentra disponible en:
-[profesorado/soluciones/UD03_aplicaciones_rag/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD03_aplicaciones_rag)
+## 💻 Soluciones de las Actividades
+Las soluciones ejecutables de esta unidad se encuentran dentro de la carpeta [profesorado/soluciones/UD03_aplicaciones_rag/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD03_aplicaciones_rag) organizadas por actividad:
+- **Actividad Inicial:** [profesorado/soluciones/UD03_aplicaciones_rag/UD03_03_actividad_inicial/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD03_aplicaciones_rag/UD03_03_actividad_inicial)
+- **Práctica Guiada:** [profesorado/soluciones/UD03_aplicaciones_rag/UD03_04_practica_guiada/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD03_aplicaciones_rag/UD03_04_practica_guiada)
+- **Práctica Autónoma:** [profesorado/soluciones/UD03_aplicaciones_rag/UD03_05_practica_autonoma/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD03_aplicaciones_rag/UD03_05_practica_autonoma)
+- **Reto de Ampliación:** [profesorado/soluciones/UD03_aplicaciones_rag/UD03_06_reto_ampliacion/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD03_aplicaciones_rag/UD03_06_reto_ampliacion)

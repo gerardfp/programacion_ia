@@ -95,6 +95,9 @@
 
 ---
 
-## 💻 Solución del Proyecto
-La solución ejecutable completa de esta unidad se encuentra disponible en:
-[profesorado/soluciones/UD01_python_profesional/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD01_python_profesional)
+## 💻 Soluciones de las Actividades
+Las soluciones ejecutables de esta unidad se encuentran dentro de la carpeta [profesorado/soluciones/UD01_python_profesional/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD01_python_profesional) organizadas por actividad:
+- **Actividad Inicial:** [profesorado/soluciones/UD01_python_profesional/UD01_03_actividad_inicial/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD01_python_profesional/UD01_03_actividad_inicial)
+- **Práctica Guiada:** [profesorado/soluciones/UD01_python_profesional/UD01_04_practica_guiada/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD01_python_profesional/UD01_04_practica_guiada)
+- **Práctica Autónoma:** [profesorado/soluciones/UD01_python_profesional/UD01_05_practica_autonoma/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD01_python_profesional/UD01_05_practica_autonoma)
+- **Reto de Ampliación:** [profesorado/soluciones/UD01_python_profesional/UD01_06_reto_ampliacion/](file:///c:/Users/gerard/Desktop/programacioia/profesorado/soluciones/UD01_python_profesional/UD01_06_reto_ampliacion)
