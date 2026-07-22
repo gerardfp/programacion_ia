@@ -5,6 +5,13 @@ modulo:
   duracion_horas: 110
   enfoque: "local-first, software libre, ABP, infraestructura del centro"
 
+rutas_estructurales:
+  materiales_alumnado: "alumnado/unidades_didacticas"
+  datasets_alumnado: "alumnado/datasets"
+  programacion_docente: "profesorado/programacion_docente"
+  infraestructura_docente: "profesorado/infraestructura"
+  recursos_evaluacion_profesor: "profesorado/unidades_didacticas"
+
 tecnologias_principales:
   lenguaje: "Python 3.11+"
   gestor_proyectos: "uv (pyproject.toml + uv.lock)"

@@ -2,6 +2,8 @@
 
 Este repositorio contiene la estructura completa de contenidos, programaciones docentes, unidades didácticas, prácticas, ejemplos de código, arquitecturas de infraestructura y evaluaciones para el módulo **Programación de Inteligencia Artificial** (110 horas).
 
+El repositorio está dividido claramente entre los **materiales del alumnado** (`alumnado/`) y los **recursos e infraestructura del docente** (`profesorado/`).
+
 ---
 
 ## 🎯 Enfoque Pedagógico y Tecnológico
@@ -17,33 +19,36 @@ Este repositorio contiene la estructura completa de contenidos, programaciones d
 
 ---
 
-## 📁 Estructura del Repositorio
+## 📁 Estructura General del Repositorio
 
 ```text
 Programacion_IA/
-├── README.md
-├── course-manifest.yaml
-├── programacion_docente/
-│   ├── programacion_general.md
-│   ├── resultados_aprendizaje.md
-│   ├── criterios_evaluacion.md
-│   ├── temporalizacion.md
-│   └── mapa_competencias.md
-├── unidades_didacticas/
-│   ├── UD01_python_profesional/
-│   ├── UD02_servicios_ia_locales/
-│   ├── UD03_aplicaciones_rag/
-│   ├── UD04_agentes_inteligentes/
-│   ├── UD05_apis_y_despliegue/
-│   └── UD06_proyecto_final/
-├── infraestructura/
-│   └── profesor/
-│       ├── compose.yaml
-│       └── .env.example
-├── datasets/
-│   └── sample_dataset/
-└── scripts/
-    └── smoke_test.py
+├── README.md                          # Visión general del repositorio
+├── course-manifest.yaml               # Manifiesto y metadatos del módulo
+│
+├── alumnado/                          # 🎓 RECURSOS DIDÁCTICOS DEL ALUMNADO
+│   ├── README.md                      # Guía de inicio para el alumnado
+│   ├── datasets/                      # Datasets y ficheros de prueba para laboratorios
+│   └── unidades_didacticas/           # Unidades UD01 a UD06 (Teoría, Prácticas, Starters)
+│       ├── UD01_python_profesional/
+│       ├── UD02_servicios_ia_locales/
+│       ├── UD03_aplicaciones_rag/
+│       ├── UD04_agentes_inteligentes/
+│       ├── UD05_apis_y_despliegue/
+│       └── UD06_proyecto_final/
+│
+└── profesorado/                       # 👨‍🏫 RECURSOS Y GESTIÓN DEL DOCENTE
+    ├── README.md                      # Guía docente
+    ├── programacion_docente/          # Documentación oficial (RA, CE, temporalización)
+    ├── infraestructura/               # Despliegue base del centro (Ollama, DBs, Docker Compose)
+    ├── scripts/                       # Scripts de mantenimiento y pruebas
+    └── unidades_didacticas/           # Unidades UD01 a UD06 (Guías, Evaluaciones, Soluciones)
+        ├── UD01_python_profesional/
+        ├── UD02_servicios_ia_locales/
+        ├── UD03_aplicaciones_rag/
+        ├── UD04_agentes_inteligentes/
+        ├── UD05_apis_y_despliegue/
+        └── UD06_proyecto_final/
 ```
 
 ---
@@ -58,7 +63,7 @@ Programacion_IA/
 Para iniciar el entorno base del profesorado:
 
 ```bash
-cd infraestructura/profesor
+cd profesorado/infraestructura/profesor
 cp .env.example .env
 docker compose up -d
 ```
