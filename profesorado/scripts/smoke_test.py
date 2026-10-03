@@ -15,7 +15,6 @@ def main():
     root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     
     unidades = [
-        ("UD01_python_profesional", "UD01"),
         ("UD02_servicios_ia_locales", "UD02"),
         ("UD03_aplicaciones_rag", "UD03"),
         ("UD04_agentes_inteligentes", "UD04"),

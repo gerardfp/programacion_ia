@@ -12,14 +12,13 @@ profesorado/
 ├── infraestructura/               # Guías de despliegue de aula (Ollama, PostgreSQL, Docker)
 ├── programacion_docente/          # Documentos macro del currículo oficial
 ├── soluciones/                    # Soluciones por código de actividad (UDXX_03 a UDXX_06)
-│   ├── UD01_03/                   # Solución Actividad Inicial UD01
-│   ├── UD01_04/                   # Solución Práctica Guiada UD01
-│   ├── UD01_05/                   # Solución Práctica Autónoma UD01
-│   ├── UD01_06/                   # Solución Reto Ampliación UD01
+│   ├── UD02_03/                   # Solución Actividad Inicial UD02
+│   ├── UD02_04/                   # Solución Práctica Guiada UD02
+│   ├── UD02_05/                   # Solución Práctica Autónoma UD02
+│   ├── UD02_06/                   # Solución Reto Ampliación UD02
 │   ├── ...                        # (Hasta UD06_06)
 ├── scripts/                       # Tests de verificación (smoke_test.py)
 └── unidades_didacticas/           # Guías unificadas del profesorado en Markdown
-    ├── UD01_python_profesional.md
     ├── UD02_servicios_ia_locales.md
     ├── UD03_aplicaciones_rag.md
     ├── UD04_agentes_inteligentes.md

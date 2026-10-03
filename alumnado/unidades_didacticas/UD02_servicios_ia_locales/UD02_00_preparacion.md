@@ -24,7 +24,7 @@ Asegúrate de que los siguientes modelos han sido descargados en el servidor:
 ## 🛠️ Requisitos de Software en el Ordenador del Alumno
 
 ### 1. Entorno Python y Dependencias
-- Proyecto gestionado con `uv` (inicializado previamente en UD01).
+- Proyecto gestionado con `uv`.
 - Librerías necesarias instalables mediante `uv add`:
   ```bash
   uv add httpx pydantic
