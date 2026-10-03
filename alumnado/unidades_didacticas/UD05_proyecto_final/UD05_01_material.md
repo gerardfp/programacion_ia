@@ -50,7 +50,7 @@ La aplicación permite al usuario cargar una fotografía de una estancia real (s
 
 Mediante un servicio de IA multimodal o generativo de imágenes preconfigurado por la aplicación, el sistema genera una representación visual del espacio integrando el producto cerámico seleccionado.
 
-**Objetivo de Aprendizaje:** No programas un modelo de difusión desde cero; **integras una capacidad multimodal existente dentro de una aplicación web mediante contratos de API claros**, gestionando la transferencia de imágenes, los parámetros del servicio y el control de errores o latencias.
+**Objetivo de Aprendizaje:** No programas un modelo de difusión desde cero; **integras una capacidad multimodal existente dentro de una aplicación web mediante contratos de API claros**, gestionando la transferencia de imágenes, los parámetros del servicio y el control de errores o latencias. El objetivo evaluable se centra estrictamente en interpretar y gestionar el contrato de la API de integración (parámetros, latencia, respuestas tipadas y manejo de errores), no en la calidad estética o artística del renderizado generado.
 
 ---
 

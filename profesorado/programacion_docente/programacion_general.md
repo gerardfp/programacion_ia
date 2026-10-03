@@ -37,7 +37,11 @@ Toda la arquitectura del curso y la delimitación de responsabilidades se fundam
 
 ### Evidencias Evaluables: Artefactos Técnicos y Comprensión
 
-La evaluación profesional se articula en dos planos inseparables:
+La evaluación profesional se articula en dos planos inseparables fundamentados en un principio docente rector:
+
+> [!IMPORTANT]
+> **Principio de Responsabilidad sobre el Código:**  
+> *«La procedencia del código —profesorado, alumnado o herramienta de IA— no determina su valor educativo. Sin embargo, quien lo utiliza debe ser capaz de interpretar su funcionamiento, identificar sus riesgos, modificarlo cuando proceda y aportar evidencias de que cumple los requisitos establecidos. La delegación de la escritura no implica la delegación de la responsabilidad técnica.»*
 
 1. **Artefactos Técnicos (Resultados y Evidencias de Ejecución):**
    - **Código adaptado y configurado:** Esquemas de datos Pydantic, parametrización de consultas y despacho gobernado de herramientas.
@@ -109,7 +113,7 @@ El aprendizaje se articula en 7 fases continuas:
 6. **Prueba automatizada:** Diseño y ejecución de pruebas unitarias e integración con `pytest` (casos nominales y negativos de elusión).
 7. **Evidencia y defensa técnica:** Aportación de resultados, trazas de auditoría y defensa oral ante el profesorado.
 
-> **Control del uso pasivo de la IA:** La combinación de los cuestionarios conceptuales y de comprensión permite evaluar con rigor si el alumno comprende los mecanismos de control con total independencia de si el código inicial fue generado con apoyo de herramientas de IA.
+> **La función dual de los cuestionarios y la verificación de la comprensión:** La combinación de los cuestionarios conceptuales y de comprensión permite evaluar con rigor si el alumno comprende los mecanismos de control con total independencia de si el código inicial fue generado con apoyo de herramientas de IA, detectando y neutralizando el uso instrumental pasivo de la tecnología.
 
 ---
 
@@ -120,7 +124,7 @@ El aprendizaje se articula en 7 fases continuas:
 | **UD1. Integración de LLM en Aplicaciones** | 10 h | RA2 | `UD01_servicios_ia_locales` | **Integración y Contratos de Datos:** APIs de modelos locales, mensajes por roles (`system`/`user`/`assistant`), límites de context window, generación de texto, extracción, datos estructurados, JSON y validación con Pydantic. Limitaciones y respuestas no fiables. Demo de streaming. |
 | **UD2. RAG y Acceso al Conocimiento** | 12 h | RA3 | `UD02_aplicaciones_rag` | **Recuperación y Grounding:** Embeddings, búsqueda semántica, chunking, bases de datos vectoriales con PostgreSQL (`pgvector`), grounding (respaldo en fuentes recuperadas) y citas, abstención en la aplicación ("NO_DATA"), **control de acceso filtrado en origen en la consulta SQL** y evaluación operacional sobre dataset cerrado. |
 | **UD3. Tool Calling y Acciones Controladas** | 10 h | RA4 | `UD03_agentes_inteligentes` | **Herramientas y Decisiones Gobernadas:** Definición formal de herramientas, argumentos tipados, validación sintáctica, reglas de negocio, autorización según impacto (lectura vs mutación vs operación crítica), confirmación (*Human-in-the-Loop*), SQL parametrizado, límites de bucle, auditoría y demo MCP. |
-| **UD4. Integración, Seguridad y Control** | 8 h | RA5 | `UD04_apis_y_despliegue` | **Arquitectura de Servicio y Resiliencia:** APIs HTTP con FastAPI y API Contracts tipados, cuádruple frontera de seguridad, gestión de secretos en `.env`, *datos $\neq$ instrucciones*, taxonomía real de errores y respuestas estructuradas de error o contingencia, introducción a multimodalidad y observabilidad. |
+| **UD4. Integración, Seguridad y Control** | 8 h | RA5 | `UD04_apis_y_despliegue` | **Arquitectura de Servicio y Resiliencia:** APIs HTTP con FastAPI y API Contracts tipados, cuádruple frontera de seguridad como modelo didáctico de defensa en profundidad, gestión de secretos en `.env`, *datos $\neq$ instrucciones*, taxonomía real de errores y respuestas estructuradas de error o contingencia, introducción a multimodalidad y observabilidad. |
 | **Proyecto Integrador: Empresa Cerámica** | 10 h | RA6 | `UD05_proyecto_final` | **Integración Empresarial y Transferencia:** Integración de IA en la aplicación web de una empresa cerámica ficticia del sur de Castellón: 1. Asistente técnico de catálogo (RAG + tools de stock), 2. Visualizador de ambientes (multimodal guiado), y 3. Asistente comercial/CRM con formalización de pedidos simulados y defensa oral. |
 | **Total** | **50 h** | | | |
 
@@ -135,7 +139,7 @@ Como proyecto final se plantea la integración de IA generativa en una aplicaci�
 El alumnado integra tres subsistemas:
 
 1. **Asistente de catálogo técnico (RAG):** Consultas sobre especificaciones de pavimentos y revestimientos cerámicos (formatos, usos recomendados y colocación) con citas explícitas de fuentes documentales como mecanismo de verificación, respuesta de abstención formal ("NO_DATA") ante falta de datos y tools de consulta (`consultar_stock`, `consultar_producto`).
-2. **Visualizador de ambientes (Multimodal):** Integración guiada de un servicio multimodal preconfigurado donde el usuario asocia la foto de una estancia real y un producto cerámico seleccionado para generar la previsualización del espacio renovado mediante contratos de API claros.
+2. **Visualizador de ambientes (Multimodal):** Integración guiada de un servicio multimodal preconfigurado donde el usuario asocia la foto de una estancia real y un producto cerámico seleccionado para generar la previsualización del espacio renovado mediante contratos de API claros (evaluando el cumplimiento del contrato de integración, parámetros y control de errores, no la calidad estética del render).
 3. **Asistente comercial y pedidos simulados:** Diálogo guiado donde el LLM extrae necesidades y metros cuadrados, invocando una herramienta determinista (`calcular_cajas(producto, m2)`) para que **la aplicación realice los cálculos matemáticos y económicos exactos**, preparando el borrador de pedido y exigiendo confirmación explícita (*Human-in-the-Loop*) antes de registrar el pedido simulado con auditoría.
 
 ### Matriz de Transferencia de Competencias
