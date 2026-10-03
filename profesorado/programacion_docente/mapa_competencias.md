@@ -1,10 +1,9 @@
 # Mapa de Trazabilidad Curricular y Competencias
 
-| Unidad Didáctica | Resultado de Aprendizaje | Criterios de Evaluación Cubiertos | Evidencia Asociada |
-|---|---|---|---|
-| **UD01: Python Profesional** | RA1 | CE1.a, CE1.b, CE1.c, CE1.d | Paquete Python estructurado con tests y logging. |
-| **UD02: Servicios IA Locales** | RA2 | CE2.a, CE2.b, CE2.c, CE2.d | Cliente Python Ollama con salida JSON validada. |
-| **UD03: RAG Locales** | RA3 | CE3.a, CE3.b, CE3.c, CE3.d | Asistente RAG local indexando PDFs en ChromaDB. |
-| **UD04: Agentes Inteligentes** | RA4 | CE4.a, CE4.b, CE4.c, CE4.d | Agente SQL con herramientas y logs de auditoría. |
-| **UD05: APIs y Despliegue** | RA5 | CE5.a, CE5.b, CE5.c, CE5.d | Stack Docker Compose con API FastAPI y Ollama. |
-| **UD06: Proyecto Final** | RA6 | CE6.a, CE6.b, CE6.c, CE6.d | Repositorio completo funcional, tests y memoria. |
+| Unidad Didáctica | Horas | Resultado de Aprendizaje | Criterios de Evaluación Cubiertos | Evidencia Asociada |
+|---|:---:|---|---|---|
+| **UD01: Inferencia y Aplicaciones LLM** | 20 h | RA2 | CE2.a, CE2.b, CE2.c, CE2.d | Cliente Python con Structured Outputs (Pydantic V2), streaming SSE, parámetros y benchmark de latencias. |
+| **UD02: Recuperación de Información y RAG** | 30 h | RA3 | CE3.a, CE3.b, CE3.c, CE3.d | Asistente RAG sobre PostgreSQL con `pgvector`, evaluación experimental con dataset propio y experimentación con búsqueda híbrida y re-ranking. |
+| **UD03: Herramientas, Agentes y MCP** | 20 h | RA4 | CE4.a, CE4.b, CE4.c, CE4.d | Tool Calling nativo con Pydantic, servidor MCP en Python sobre PostgreSQL, control de bucles y registro de auditoría. |
+| **UD04: APIs, Despliegue y Operación** | 20 h | RA5 | CE5.a, CE5.b, CE5.c, CE5.d | Stack Docker Compose con API FastAPI, Ollama, panel de diagnóstico Langfuse y seguridad transversal. |
+| **UD05: Proyecto Final Integrador** | 20 h | RA6 | CE6.a, CE6.b, CE6.c, CE6.d | Repositorio empresarial sobre plantilla docente con tests, telemetría y defensa oral con preguntas conceptuales. |

@@ -15,11 +15,11 @@ def main():
     root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     
     unidades = [
-        ("UD02_servicios_ia_locales", "UD02"),
-        ("UD03_aplicaciones_rag", "UD03"),
-        ("UD04_agentes_inteligentes", "UD04"),
-        ("UD05_apis_y_despliegue", "UD05"),
-        ("UD06_proyecto_final", "UD06")
+        ("UD01_servicios_ia_locales", "UD01"),
+        ("UD02_aplicaciones_rag", "UD02"),
+        ("UD03_agentes_inteligentes", "UD03"),
+        ("UD04_apis_y_despliegue", "UD04"),
+        ("UD05_proyecto_final", "UD05")
     ]
 
     docs_alumnado = [
@@ -43,7 +43,6 @@ def main():
 
     print("\n1. Verificando documentos macro y raíces...")
     archivos_macro = [
-        os.path.join(root_dir, "course-manifest.yaml"),
         os.path.join(root_dir, "README.md"),
         os.path.join(root_dir, "alumnado", "README.md"),
         os.path.join(root_dir, "profesorado", "README.md"),

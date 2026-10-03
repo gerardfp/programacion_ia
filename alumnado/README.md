@@ -13,11 +13,11 @@ alumnado/
 ├── README.md                      # Guía del estudiante (este archivo)
 ├── datasets/                      # Conjuntos de datos para ejercicios y prácticas
 └── unidades_didacticas/           # Contenidos y actividades por unidad
-    ├── UD02_servicios_ia_locales/ # Inferencia y consumo de LLMs locales (Ollama)
-    ├── UD03_aplicaciones_rag/     # Asistentes documentales y bases vectoriales
-    ├── UD04_agentes_inteligentes/ # Agentes, ejecuciones de herramientas y memoria
-    ├── UD05_apis_y_despliegue/     # FastAPI, Docker Compose y monitorización
-    └── UD06_proyecto_final/       # Proyecto integrador final
+    ├── UD01_servicios_ia_locales/ # Inferencia y consumo de LLMs locales (Ollama)
+    ├── UD02_aplicaciones_rag/     # Asistentes documentales y bases vectoriales
+    ├── UD03_agentes_inteligentes/ # Agentes, ejecuciones de herramientas y memoria
+    ├── UD04_apis_y_despliegue/     # FastAPI, Docker Compose y monitorización
+    └── UD05_proyecto_final/       # Proyecto integrador final
 ```
 
 ---
@@ -40,7 +40,7 @@ Dentro de cada carpeta de unidad didáctica (`UDXX_...`) dispones de los siguien
 ## 🚀 Cómo empezar una práctica
 
 1. Consulta primero `UDXX_00_preparacion.md` para verificar que tu equipo e infraestructura cumplen los requisitos.
-2. Navega a la unidad correspondiente (ej. `alumnado/unidades_didacticas/UD02_servicios_ia_locales/starter`).
+2. Navega a la unidad correspondiente (ej. `alumnado/unidades_didacticas/UD01_servicios_ia_locales/starter`).
 3. Crea tu entorno e instala dependencias con `uv`:
    ```bash
    uv sync

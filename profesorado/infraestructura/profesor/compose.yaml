@@ -27,6 +27,22 @@ services:
     networks:
       - infra_net
 
+  langfuse:
+    image: langfuse/langfuse:2
+    container_name: profesor_langfuse
+    ports:
+      - "${LANGFUSE_PORT:-3000}:3000"
+    environment:
+      DATABASE_URL: "postgresql://${POSTGRES_USER:-profesor}:${POSTGRES_PASSWORD:-profesor_secret}@postgres:5432/${POSTGRES_DB:-ia_db}"
+      NEXTAUTH_URL: "http://localhost:3000"
+      NEXTAUTH_SECRET: "${NEXTAUTH_SECRET:-profesor_secret_key_12345}"
+      SALT: "${SALT:-profesor_salt_key_12345}"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - infra_net
+
 networks:
   infra_net:
     driver: bridge
