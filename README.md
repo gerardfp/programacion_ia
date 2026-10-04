@@ -1,7 +1,5 @@
 # Programación de Inteligencia Artificial (5073)
 
-## 📑 Índice General del Manual
-
 ### [UD01: Inferencia Local, Mensajes y Contratos de Software (10 horas)](#ud01-servicios-ia-locales)
 * [UD01 - Etapa 1: Actividad Inicial (El fallo de parsear texto libre con json.loads)](#ud01-etapa1)
 * [UD01 - Etapa 2: Cuestionario Conceptual (Comprender el problema y los roles HTTP)](#ud01-etapa2)
