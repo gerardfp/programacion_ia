@@ -30,7 +30,7 @@
 
 - **Servicio Ollama Operativo:** Servidor local ejecutando `llama3.2:3b` y el modelo de embeddings `nomic-embed-text`.
 - **Base de Datos PostgreSQL 16 con `pgvector`:** Instancia con extensión `vector` e índice preconfigurado en el Compose provisto.
-- **Dataset Documental de Aula:** Corpus técnico en `alumnado/datasets/sample_dataset/` con documentos que incluyen permisos por departamento y referencias cruzadas.
+- **Dataset Documental de Aula:** Corpus técnico en `datasets/sample_dataset/` con documentos que incluyen permisos por departamento y referencias cruzadas.
 - **Librerías Python locales:** `httpx`, `psycopg` (o `sqlalchemy`), `pgvector` y `pytest` gestionados mediante `uv`.
 
 ---
@@ -42,35 +42,35 @@
   - *Diapositiva 1:* Límites de memoria y alucinación en LLMs: Del texto libre al Grounding mediante RAG.
   - *Diapositiva 2:* Calidad de datos previa: Limpieza, descarte de vacíos y preservación de estructura en chunking.
   - *Diapositiva 3:* Generación de embeddings vía API REST de Ollama (`POST /api/embed`) y distancia coseno en `pgvector`.
-- **Material Teórico:** Secciones 1 y 2 de `alumnado/unidades_didacticas/UD02_aplicaciones_rag/UD02_01_material.md`.
+- **Material Teórico:** UD02 en [README.md](file:///home/gerard/programacion_ia/README.md#ud02-aplicaciones-rag).
 - **Desarrollo de la Sesión:**
   1. Limpieza de un lote de documentos y fragmentación preservando títulos de sección.
   2. Obtención de embeddings mediante llamada a la API local (`str` $\rightarrow$ `list[float]`).
   3. Inserción de fragmentos y vectores en PostgreSQL con tabla tipada `vector`.
-  4. **Actividad Inicial:** `UD02_03_actividad_inicial.md`.
+  4. **Actividad Inicial:** Etapa 1 en [README.md](file:///home/gerard/programacion_ia/README.md#ud02-etapa1).
 
 #### **Sesión 3-4 (4 horas): Control de Acceso en la Consulta de Recuperación y Citación**
 - **Diapositivas a proyectar:** 
   - *Diapositiva 4:* Seguridad en RAG: Filtrar en la consulta vs filtrar en memoria (*"Nunca recuperar para filtrar después"*).
   - *Diapositiva 5:* Consultas SQL vectoriales con filtros combinados (`WHERE departamento = :dep AND rol <= :rol`).
   - *Diapositiva 6:* Construcción de prompts delimitados con inyección de contexto y citación obligatoria de fuentes.
-- **Material Teórico:** Secciones 3 y 4 del material del alumno.
+- **Material Teórico:** Etapas 3 y 4 del manual del alumno.
 - **Desarrollo de la Sesión:**
   1. Implementación de la consulta SQL vectorial con filtros de autorización integrados.
   2. Ensamblado del prompt con delimitadores claros para separar contexto de instrucciones.
   3. Comprobación de que usuarios sin permisos reciben abstención al no haber recuperado documentos confidenciales.
-  4. **Práctica Guiada:** `UD02_04_practica_guiada.md`.
+  4. **Práctica Guiada:** Etapa 3 en [README.md](file:///home/gerard/programacion_ia/README.md#ud02-etapa3).
 
 #### **Sesión 5-6 (4 horas): Evaluación en Dos Niveles (Retrieval + Fidelidad de Generación)**
 - **Diapositivas a proyectar:** 
   - *Diapositiva 7:* Por qué evaluar en dos niveles: el desacoplamiento entre recuperación y generación.
   - *Diapositiva 8:* Métrica de recuperación (*Hit Rate @ k*) y verificación de fidelidad factual sobre dataset cerrado.
-- **Material Teórico:** Sección 5 del material del alumno.
+- **Material Teórico:** Etapas 5 a 7 del manual del alumno.
 - **Desarrollo de la Sesión:**
   1. Ejecución de suite de evaluación sobre el dataset de aula (20-30 preguntas controladas).
   2. Medición cuantitativa del *Hit Rate @ k*.
   3. Evaluación de respuestas generadas comprobando citación exacta y respuesta "NO_DATA" en preguntas sin contexto.
-  4. **Práctica Autónoma y Reto de Consolidación:** `UD02_05_practica_autonoma.md` y `UD02_06_reto_ampliacion.md`.
+  4. **Práctica Autónoma y Reto de Consolidación:** Etapas 5 y 7 en [README.md](file:///home/gerard/programacion_ia/README.md#ud02-etapa5).
 
 ---
 

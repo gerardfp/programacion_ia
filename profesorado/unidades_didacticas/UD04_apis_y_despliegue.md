@@ -48,24 +48,24 @@
   - *Diapositiva 1:* Qué es un API Contract: Esquemas formales Request/Response y códigos HTTP semánticos.
   - *Diapositiva 2:* Endpoints `/query`, `/agent` y `/health` con FastAPI y Swagger UI (`/docs`).
   - *Diapositiva 3:* Gestión de credenciales: Variables de entorno en `.env` y exclusión en `.gitignore`.
-- **Material Teórico:** Secciones 1 y 2 de `alumnado/unidades_didacticas/UD04_apis_y_despliegue/UD04_01_material.md`.
+- **Material Teórico:** UD04 en [README.md](file:///home/gerard/programacion_ia/README.md#ud04-apis-y-despliegue).
 - **Desarrollo de la Sesión:**
   1. Definición de contratos Pydantic para peticiones y respuestas con citas y metadatos.
   2. Construcción de endpoints en FastAPI validando tipos y cabeceras.
   3. Comprobación interactiva en `/docs` y verificación de que `.env` no se versiona en Git.
-  4. **Actividad Inicial:** `UD04_03_actividad_inicial.md`.
+  4. **Actividad Inicial:** Etapa 1 en [README.md](file:///home/gerard/programacion_ia/README.md#ud04-etapa1).
 
 #### **Sesión 3-4 (4 horas): Cuádruple Frontera de Seguridad y Taxonomía de Errores (Crash & Learn)**
 - **Diapositivas a proyectar:** 
   - *Diapositiva 4:* La Cuádruple Frontera: Autenticación vs Autorización vs Acceso a datos vs Negocio.
   - *Diapositiva 5:* Prompt Injection: Por qué el prompt no es una barrera de seguridad (*"El prompt no autoriza"*).
   - *Diapositiva 6:* Taxonomía real de errores: De timeouts de inferencia (504) a fallbacks estructurados.
-- **Material Teórico:** Sección 3 del material del alumno.
+- **Material Teórico:** Etapas 3 a 5 del manual del alumno.
 - **Desarrollo de la Sesión (Crash & Learn):**
   1. **El Fallo:** Se inyecta una instrucción maliciosa en el input simulando evasión de permisos y se fuerza un timeout desconectando el LLM. La API sin defensas devuelve trazas internas o ejecuta acciones no autorizadas.
   2. **La Solución:** Separación tajante entre datos e instrucciones, autorización externa en el Harness y manejadores de excepciones que devuelven respuestas controladas de fallback.
-  3. **Práctica Guiada y Práctica Autónoma:** `UD04_04_practica_guiada.md` y `UD04_05_practica_autonoma.md`.
-  4. **Reto de Consolidación:** `UD04_06_reto_ampliacion.md`.
+  3. **Práctica Guiada y Práctica Autónoma:** Etapas 3 y 5 en [README.md](file:///home/gerard/programacion_ia/README.md#ud04-etapa3).
+  4. **Reto de Consolidación:** Etapa 7 en [README.md](file:///home/gerard/programacion_ia/README.md#ud04-etapa7).
 
 ---
 

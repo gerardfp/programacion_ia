@@ -9,7 +9,7 @@
 ## RA2. Consume servicios y modelos locales de IA mediante contratos de datos verificables
 - Describe los fundamentos de la comunicación HTTP esencial (petición/respuesta, códigos de estado) hacia un endpoint local de chat provisto por el servicio de inferencia.
 - Estructura diálogos formales mediante mensajes tipados y roles (`system`, `user`, `assistant`) y gestiona los límites de la ventana de contexto (*context window*) y los efectos de contextos excesivamente grandes.
-- Aplica técnicas formales de *Prompt Engineering* (delimitadores, plantillas parametrizadas) e interioriza la definición operativa de alucinación y la necesidad del anclaje (*grounding*).
+- Aplica técnicas formales de *Prompt Engineering* (delimitadores, plantillas parametrizadas) e interioriza el fenómeno de las alucinaciones, la falta de garantía de veracidad factual y la necesidad del anclaje (*grounding*).
 - Establece la abstención como parte del contrato de comportamiento y verifica si el modelo cumple la convención ante falta de información.
 - Define y verifica contratos de datos estructurados: el modelo propone una estructura JSON según un esquema y el software valida y tipa los datos mediante esquemas Pydantic (`model_validate_json`).
 - Observa el comportamiento de inferencia en tiempo real mediante streaming (demostración de Server-Sent Events).
@@ -33,7 +33,7 @@
 ## RA5. Expone APIs con contratos explícitos, seguridad integral y robustez básica ante fallos
 - Desarrolla servicios con FastAPI definiendo contratos formales de API (*API Contracts*) con esquemas Pydantic para peticiones y respuestas tipadas (incluyendo citas y métricas), con códigos de estado HTTP semánticos.
 - Comprende el rol de la concurrencia y asincronía para no bloquear el bucle de eventos durante esperas de red I/O.
-- Aplica la cuádruple frontera de seguridad utilizando la identidad provista en el Starter Kit (`current_user` autenticado) para evaluar autorización, filtros SQL y reglas de negocio.
+- Aplica la cuádruple frontera de seguridad partiendo de la identidad autenticada disponible en la aplicación (`current_user`) para evaluar la autorización en la aplicación, el control de acceso a datos y las reglas de negocio.
 - Aplica el principio de seguridad ante Prompt Injection: *los delimitadores no son una barrera mágica y el prompt no es un mecanismo de autorización*; la protección reside en la arquitectura exterior.
 - Clasifica y gestiona errores con robustez básica: fallos de contrato (422), violaciones de negocio (400/422), autorización (403) y timeouts de inferencia (504 con fallbacks estructurados).
 - Asegura las credenciales mediante variables de entorno en `.env` excluidas del repositorio Git.

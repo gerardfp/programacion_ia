@@ -46,24 +46,24 @@
   - *Diapositiva 1:* De Chatbot a Sistema Activo: El axioma de autoridad (*"El modelo propone, el Harness ejecuta"*).
   - *Diapositiva 2:* Diagrama secuencial del protocolo en 8 pasos y mensajes con `role: "tool"`.
   - *Diapositiva 3:* La Tríada de Validación: Sintaxis (Pydantic), Negocio (Reglas de dominio) y Autorización (Permisos de usuario).
-- **Material Teórico:** Secciones 1 y 2 de `alumnado/unidades_didacticas/UD03_agentes_inteligentes/UD03_01_material.md`.
+- **Material Teórico:** UD03 en [README.md](file:///home/gerard/programacion_ia/README.md#ud03-agentes-inteligentes).
 - **Desarrollo de la Sesión:**
   1. Definición formal de herramientas con esquemas `BaseModel` y descripciones claras.
   2. Implementación del despachador en el Harness: validación sintáctica de argumentos antes de invocar la función.
   3. Aplicación de reglas de negocio que rechazan solicitudes que violan restricciones del dominio.
-  4. **Actividad Inicial:** `UD03_03_actividad_inicial.md`.
+  4. **Actividad Inicial:** Etapa 1 en [README.md](file:///home/gerard/programacion_ia/README.md#ud03-etapa1).
 
 #### **Sesión 3-4 (4 horas): Impacto Proporcional, SQL Parametrizado y Límites de Bucle (Crash & Learn)**
 - **Diapositivas a proyectar:** 
   - *Diapositiva 4:* Autorización proporcional al impacto: operaciones automáticas vs Human-in-the-Loop.
   - *Diapositiva 5:* SQL Injection vs Prompt Injection: Uso obligatorio de consultas SQL parametrizadas.
   - *Diapositiva 6:* El fallo del bucle infinito y su solución mediante límite explícito de iteraciones y timeouts.
-- **Material Teórico:** Sección 3 del material del alumno.
+- **Material Teórico:** Etapas 3 y 4 del manual del alumno.
 - **Desarrollo de la Sesión (Crash & Learn):**
   1. **El Fallo:** Se simula un error de herramienta en un bucle sin límites; el LLM reintenta indefinidamente consumiendo CPU y saturando el contexto.
   2. **La Solución:** Inclusión de contador de pasos con corte forzado, timeout en llamadas y captura de excepciones.
   3. Implementación de confirmación humana obligatoria ante operaciones críticas.
-  4. **Práctica Guiada:** `UD03_04_practica_guiada.md`.
+  4. **Práctica Guiada:** Etapa 3 en [README.md](file:///home/gerard/programacion_ia/README.md#ud03-etapa3).
 
 #### **Sesión 5 (2 horas): Demostración de Desacoplamiento con MCP**
 - **Diapositivas a proyectar:** 
@@ -72,7 +72,7 @@
 - **Desarrollo de la Sesión:**
   1. Conexión del bucle de herramientas al servidor MCP provisto.
   2. Ejecución de consultas de inventario desacopladas.
-  3. **Práctica Autónoma y Reto de Consolidación:** `UD03_05_practica_autonoma.md` y `UD03_06_reto_ampliacion.md`.
+  3. **Práctica Autónoma y Reto de Consolidación:** Etapas 5 y 7 en [README.md](file:///home/gerard/programacion_ia/README.md#ud03-etapa5).
 
 ---
 

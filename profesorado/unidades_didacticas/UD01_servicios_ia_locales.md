@@ -41,23 +41,23 @@
   - *Diapositiva 1:* Fundamentos HTTP (Petición/Respuesta, Códigos de Estado) y Arquitectura Cliente-Servidor de Inferencia Local.
   - *Diapositiva 2:* Estructura formal de una conversación: Mensajes y roles (`system`, `user`, `assistant`) frente a concatenación de texto plano.
   - *Diapositiva 3:* Parámetros de inferencia (temperatura, longitud) y límites físicos de la ventana de contexto (*Context Window*).
-- **Material Teórico:** Secciones 1 y 2 de `alumnado/unidades_didacticas/UD01_servicios_ia_locales/UD01_01_material.md`.
+- **Material Teórico:** UD01 en [README.md](file:///home/gerard/programacion_ia/README.md#ud01-servicios-ia-locales).
 - **Desarrollo de la Sesión:**
   1. Exploración con `curl` del protocolo HTTP hacia `/api/tags` y `/api/chat`.
   2. Construcción de una estructura de mensajes en Python con rol de sistema restrictivo y rol de usuario.
   3. Experimentación con la temperatura (0.0 vs 1.0) y saturación intencionada de la ventana de contexto para observar el truncado de información.
-  4. **Actividad Inicial:** `UD01_03_actividad_inicial.md`.
+  4. **Actividad Inicial:** Etapa 1 en [README.md](file:///home/gerard/programacion_ia/README.md#ud01-etapa1).
 
 #### **Sesión 3-4 (4 horas): Prompt Engineering, Alucinación, Contratos y Pydantic**
 - **Diapositivas a proyectar:** 
   - *Diapositiva 4:* Prompt Engineering como disciplina de software: delimitadores, instrucciones negativas, plantillas y few-shot.
   - *Diapositiva 5:* El problema de la Alucinación y la necesidad de Grounding (anclaje factual con cláusulas de abstención).
   - *Diapositiva 6:* El fallo de parsear texto libre con `json.loads()` frente a contratos y validación con Pydantic (`model_validate_json`).
-- **Material Teórico:** Secciones 3 y 4 del material del alumno.
+- **Material Teórico:** Etapas 3 a 5 del manual del alumno.
 - **Desarrollo de la Sesión (Crash & Learn):**
   1. **El Fallo:** El alumnado pide extraer datos en JSON sin activar formato JSON. El LLM añade preámbulos conversacionales ("¡Claro! Aquí tienes tu JSON:") y `json.loads()` crashea con `JSONDecodeError`.
   2. **La Solución:** Solicitud de esquema JSON al modelo y validación estricta en el Harness con `BaseModel` de Pydantic (`model_validate_json`).
-  3. **Práctica Guiada y Práctica Autónoma:** `UD01_04_practica_guiada.md` y `UD01_05_practica_autonoma.md`.
+  3. **Práctica Guiada y Práctica Autónoma:** Etapas 3 y 5 en [README.md](file:///home/gerard/programacion_ia/README.md#ud01-etapa3).
 
 #### **Sesión 5 (2 horas): Demostración de Streaming y Métricas de Inferencia**
 - **Diapositivas a proyectar:** 
@@ -66,7 +66,7 @@
 - **Desarrollo de la Sesión:**
   1. Demostración guiada de consumo de respuestas token a token mediante Server-Sent Events.
   2. Observación de métricas de rendimiento (`eval_count` / `eval_duration`).
-  3. **Reto de Consolidación:** `UD01_06_reto_ampliacion.md`.
+  3. **Reto de Consolidación:** Etapa 7 en [README.md](file:///home/gerard/programacion_ia/README.md#ud01-etapa7).
 
 ---
 
