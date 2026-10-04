@@ -1,46 +1,28 @@
 # 📘 Programación de Inteligencia Artificial (5073)
 
-### [UD01: Inferencia Local, Mensajes y Contratos de Software (10 horas)](UD01.md)
-* [UD01 - Etapa 1: Actividad Inicial (El fallo de parsear texto libre con json.loads)](UD01.md#ud01-etapa1)
-* [UD01 - Etapa 2: Cuestionario Conceptual (Comprender el problema y los roles HTTP)](UD01.md#ud01-etapa2)
-* [UD01 - Etapa 3: Práctica Guiada (Cliente Ollama y validación de contratos con Pydantic)](UD01.md#ud01-etapa3)
-* [UD01 - Etapa 4: Cuestionario de Comprensión de la Implementación (Flujo y excepciones)](UD01.md#ud01-etapa4)
-* [UD01 - Etapa 5: Práctica Autónoma (Validadores de dominio y respuestas ante entradas no conformes)](UD01.md#ud01-etapa5)
-* [UD01 - Etapa 6: Prueba Automatizada (Tests nominales y adversos con pytest)](UD01.md#ud01-etapa6)
-* [UD01 - Etapa 7: Reto de Ampliación y Defensa Técnica (Streaming SSE y latencia TTFT)](UD01.md#ud01-etapa7)
+**Módulo:** Programación de Inteligencia Artificial (5073) — Modalidad Intensiva (50 horas)  
+**Modalidad:** Local-First, Software Libre, Python con `uv` y Docker  
+**Tesis Central del Aprendizaje:**  
+> *«No aprendes a construir ni entrenar un LLM; aprendes a programar aplicaciones software que integran modelos de lenguaje y a construir las fronteras de responsabilidad, control y verificación alrededor de ellos.»*
 
-### [UD02: RAG, Embeddings y Control de Acceso en Origen (12 horas)](UD02.md)
-* [UD02 - Etapa 1: Actividad Inicial (Vulnerabilidad de fuga de datos al filtrar en memoria)](UD02.md#ud02-etapa1)
-* [UD02 - Etapa 2: Cuestionario Conceptual (Ventana de contexto, grounding y abstención)](UD02.md#ud02-etapa2)
-* [UD02 - Etapa 3: Práctica Guiada (Pipeline RAG con pgvector y filtrado SQL en origen)](UD02.md#ud02-etapa3)
-* [UD02 - Etapa 4: Cuestionario de Comprensión de la Implementación (Seguridad en la query)](UD02.md#ud02-etapa4)
-* [UD02 - Etapa 5: Práctica Autónoma (Citas técnicas verificables y abstención con NO_DATA)](UD02.md#ud02-etapa5)
-* [UD02 - Etapa 6: Prueba Automatizada (Hit Rate @ k y tests de aislamiento sobre dataset cerrado)](UD02.md#ud02-etapa6)
-* [UD02 - Etapa 7: Reto de Ampliación y Defensa Técnica (Aceleración HNSW y defensa oral)](UD02.md#ud02-etapa7)
+> 📖 **Guía Docente y Curricular:** Consulta [`GUIDE.md`](GUIDE.md) para conocer la propuesta curricular completa, la Tríada de Responsabilidades del Alumno, el Ciclo de Aprendizaje en 7 Etapas y las rúbricas oficiales de evaluación.
 
-### [UD03: Tool Calling, Validación y Acciones Gobernadas (10 horas)](UD03.md)
-* [UD03 - Etapa 1: Actividad Inicial (El peligro de la delegación de autoridad y SQL Injection)](UD03.md#ud03-etapa1)
-* [UD03 - Etapa 2: Cuestionario Conceptual (El LLM propone, la aplicación ejecuta)](UD03.md#ud03-etapa2)
-* [UD03 - Etapa 3: Práctica Guiada (Despachador de herramientas con validación sintáctica y SQL parametrizado)](UD03.md#ud03-etapa3)
-* [UD03 - Etapa 4: Cuestionario de Comprensión de la Implementación (Límites de bucle y auditoría)](UD03.md#ud03-etapa4)
-* [UD03 - Etapa 5: Práctica Autónoma (Operaciones críticas con confirmación Human-in-the-Loop)](UD03.md#ud03-etapa5)
-* [UD03 - Etapa 6: Prueba Automatizada (Neutralización de SQL Injection y control de elusión)](UD03.md#ud03-etapa6)
-* [UD03 - Etapa 7: Reto de Ampliación y Defensa Técnica (Conexión estándar con Model Context Protocol)](UD03.md#ud03-etapa7)
+---
 
-### [UD04: Integración en APIs, Seguridad y Resiliencia (8 horas)](UD04.md)
-* [UD04 - Etapa 1: Actividad Inicial (Prompt Injection: el prompt no autoriza acciones)](UD04.md#ud04-etapa1)
-* [UD04 - Etapa 2: Cuestionario Conceptual (Cuádruple frontera y taxonomía de errores de red)](UD04.md#ud04-etapa2)
-* [UD04 - Etapa 3: Práctica Guiada (API REST con FastAPI, API Contracts y credenciales en .env)](UD04.md#ud04-etapa3)
-* [UD04 - Etapa 4: Cuestionario de Comprensión de la Implementación (Códigos HTTP y flujo de contingencia)](UD04.md#ud04-etapa4)
-* [UD04 - Etapa 5: Práctica Autónoma (Timeouts de inferencia y respuestas estructuradas de contingencia)](UD04.md#ud04-etapa5)
-* [UD04 - Etapa 6: Prueba Automatizada (Tests de API con TestClient: 422, 403 y 504/degraded)](UD04.md#ud04-etapa6)
-* [UD04 - Etapa 7: Reto de Ampliación y Defensa Técnica (Observabilidad con Langfuse e integración multimodal)](UD04.md#ud04-etapa7)
+## 📚 Unidades Didácticas
 
-### [UD05: Proyecto Integrador: Empresa Cerámica del Sur de Castellón (10 horas)](UD05.md)
-* [UD05 - Etapa 1: Actividad Inicial (Exploración del Starter Kit de la Empresa Cerámica y sus fallos base)](UD05.md#ud05-etapa1)
-* [UD05 - Etapa 2: Cuestionario Conceptual (Transferencia de competencias al caso industrial cerámico)](UD05.md#ud05-etapa2)
-* [UD05 - Etapa 3: Práctica Guiada (Integración del Asistente Técnico RAG sobre catálogo cerámico con tools)](UD05.md#ud05-etapa3)
-* [UD05 - Etapa 4: Cuestionario de Comprensión de la Implementación (Contratos entre los 3 subsistemas)](UD05.md#ud05-etapa4)
-* [UD05 - Etapa 5: Práctica Autónoma (Asistente Comercial: cálculo determinista de cajas y confirmación)](UD05.md#ud05-etapa5)
-* [UD05 - Etapa 6: Prueba Automatizada (Suite completa sobre dataset cerrado de 20 casos cerámicos)](UD05.md#ud05-etapa6)
-* [UD05 - Etapa 7: Reto de Ampliación y Defensa Técnica (Defensa oral individual ante el banco de 12 preguntas)](UD05.md#ud05-etapa7)
+* [UD01: Inferencia Local, Mensajes y Contratos de Software](UD01.md)
+* [UD02: RAG, Embeddings y Control de Acceso en Origen](UD02.md)
+* [UD03: Tool Calling, Validación y Acciones Gobernadas](UD03.md)
+* [UD04: Integración en APIs, Seguridad y Resiliencia](UD04.md)
+* [UD05: Proyecto Integrador: Empresa Cerámica del Sur de Castellón](UD05.md)
+
+---
+
+## 🏁 Criterio de Éxito del Estudiante
+
+Has completado el módulo con éxito si eres capaz de mirar cualquier arquitectura de software que integre inteligencia artificial y responder con rigor de ingeniería:
+* **¿Quién propone?** (El LLM)
+* **¿Quién gobierna, valida y autoriza?** (El AI Harness)
+* **¿Quién calcula y ejecuta?** (La Aplicación Determinista)
+* **¿Qué prueba demuestra que los controles funcionan?** (Los Tests Automatizados)

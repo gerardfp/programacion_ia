@@ -284,14 +284,15 @@ Para asegurar que las 40 horas lectivas no se conviertan en una carrera por copi
 ```
 
 ### 🔹 UD1. Integración de LLM en Aplicaciones (10 horas)
-Se introducen los modelos de lenguaje como componentes de software accesibles vía HTTP.
+Se introducen los modelos de lenguaje como componentes de software accesibles vía HTTP, comprendiendo su naturaleza stateless y la necesidad de gestión de contexto por parte de la aplicación.
 
 * **Actividades de aplicación y verificación:**
-  - Envío y recepción de peticiones estructuradas con roles (`system`, `user`, `assistant`).
-  - Extracción y clasificación de texto libre transformándolo en datos utilizables por la aplicación.
-  - Validación de respuestas estructuradas mediante Pydantic (`model_validate_json`), comprobando cómo los esquemas permiten validar las salidas antes de ser procesadas por la lógica de aplicación.
+  - De petición aislada a conversación: demostración empírica de la falta de memoria del servidor HTTP y la gestión del contexto por parte de la aplicación (del chat ingenuo con texto concatenado a mensajes estructurados con roles `system`, `user` y `assistant`).
+  - Extracción y estructuración de datos: comprobación del fallo fatal al parsear texto libre con `json.loads` (*Crash & Learn*) frente al uso de modos JSON estructurados.
+  - Validación de respuestas estructuradas mediante contratos Pydantic (`model_validate_json`), comprobando cómo los esquemas permiten validar las salidas antes de ser procesadas por la lógica de aplicación.
 * **Aspectos de análisis:**
-  - Límites de la ventana de contexto (*context window*) y efectos de saturación.
+  - ¿Dónde reside la memoria?: comprensión de que el servidor no tiene estado persistente y que la aplicación gobierna y reenvía el contexto en cada llamada.
+  - Límites de la ventana de contexto (*context window*), consumo acumulado por el historial y efectos de saturación (justificación directa de la necesidad de RAG).
   - Alucinaciones y falta de garantía de veracidad: comprender que el modelo no garantiza por sí mismo la veracidad factual ni la corrección de sus propuestas.
 * **Elementos a reconocer:** Demostración de streaming (SSE) y observación de latencia total frente a tiempo hasta primer token (TTFT).
 
