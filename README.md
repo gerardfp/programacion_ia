@@ -2,12 +2,13 @@
 
 # Programación de Inteligencia Artificial
 
-Local-First, Software Libre, Soberanía tecnológica, Control humano, Independencia tecnológica, Comprender antes de memorizar, Pragmatismo
+> *«No aprendes a construir ni entrenar un LLM; aprendes a programar aplicaciones software que integran modelos de lenguaje y a construir las fronteras de responsabilidad, control y verificación alrededor de ellos.»*
 
 <kbd>Local-First</kbd> <kbd>Software Libre</kbd> <kbd>Soberanía tecnológica</kbd> <kbd>Control humano</kbd> <kbd>Independencia tecnológica</kbd> <kbd>Comprender antes de memorizar</kbd> <kbd>Pragmatismo</kbd>
 
+`Python` `uv` `Ollama` `Qwen` `BGE-M3` `FastAPI` `Pydantic` `HTTPX` `PostgreSQL` `pgvector` `Docker` `Langfuse` `pytest`
 
-> *«No aprendes a construir ni entrenar un LLM; aprendes a programar aplicaciones software que integran modelos de lenguaje y a construir las fronteras de responsabilidad, control y verificación alrededor de ellos.»*
+`LLMs` `SLMs` `Agentes` `RAG` `Embeddings` `Búsqueda semántica` `Structured Outputs` `Prompt Injection` `Guardrails` `Ventana de contexto` `Human-in-the-Loop` `LLMOps` `Alucinaciones`
 
 ---
 
