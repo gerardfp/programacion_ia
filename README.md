@@ -1,5 +1,4 @@
-# Programación de Inteligencia Artificial (5073) — Modalidad Intensiva (50 horas)  
-## Curso Especialización Inteligencia Artificial y Big Data - IES BENIGASLO
+# Programación de Inteligencia Artificial (5073)
 
 ## 📑 Índice General del Manual
 
