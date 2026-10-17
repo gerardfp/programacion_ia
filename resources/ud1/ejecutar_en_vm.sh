@@ -12,10 +12,9 @@ CPU=2
 RAM="2G"
 DISK="10G"
 
-AGENT_LOCAL="./dangerous_tool_calling.py"
+AGENT_LOCAL=""
 
 PROJECT_DIR="/home/ubuntu"
-AGENT_REMOTE="$PROJECT_DIR/dangerous_tool_calling.py"
 MARKER="$PROJECT_DIR/.agente-a-prepared"
 
 OLLAMA_PORT=11434
@@ -30,7 +29,10 @@ RESET=0
 
 mostrar_ayuda() {
     cat <<'EOF'
-Uso: ./ejecutar_en_vm.sh [opción]
+Uso: ./ejecutar_en_vm.sh [opción] <script.py>
+
+Argumentos:
+  <script.py>    Ruta al script de Python que se ejecutará en la VM.
 
 Opciones:
   --reconfigure  Reinstala los requisitos y configura el proyecto,
@@ -38,7 +40,7 @@ Opciones:
   --reset        Destruye la VM y la crea de nuevo desde cero.
   -h, --help     Muestra esta ayuda.
 
-Sin opciones, prepara la VM solo si es necesario y ejecuta el agente.
+Sin opciones, prepara la VM solo si es necesario y ejecuta el script indicado.
 EOF
 }
 
@@ -54,10 +56,19 @@ while [[ $# -gt 0 ]]; do
             mostrar_ayuda
             exit 0
             ;;
-        *)
+        -*)
             echo "ERROR: Opción desconocida: $1" >&2
             mostrar_ayuda
             exit 1
+            ;;
+        *)
+            if [[ -z "$AGENT_LOCAL" ]]; then
+                AGENT_LOCAL="$1"
+            else
+                echo "ERROR: Argumento inesperado: $1" >&2
+                mostrar_ayuda
+                exit 1
+            fi
             ;;
     esac
     shift
@@ -67,6 +78,15 @@ if [[ "$RECONFIGURE" -eq 1 && "$RESET" -eq 1 ]]; then
     echo "ERROR: --reconfigure y --reset son incompatibles." >&2
     exit 1
 fi
+
+if [[ -z "$AGENT_LOCAL" ]]; then
+    echo "ERROR: Debes indicar el script a ejecutar." >&2
+    mostrar_ayuda
+    exit 1
+fi
+
+AGENT_NAME="$(basename "$AGENT_LOCAL")"
+AGENT_REMOTE="$PROJECT_DIR/$AGENT_NAME"
 
 # ============================================================
 # Funciones auxiliares
@@ -249,7 +269,7 @@ fi
 # 8. Copiar el agente actualizado
 # ============================================================
 
-info "Copiando dangerous_tool_calling.py"
+info "Copiando $AGENT_NAME"
 
 multipass transfer \
     "$AGENT_LOCAL" \
@@ -326,7 +346,7 @@ fi
 
 echo
 echo "============================================================"
-echo " Ejecutando dangerous_tool_calling.py"
+echo " Ejecutando $AGENT_NAME"
 echo "============================================================"
 echo
 echo "VM:             $VM"
@@ -335,11 +355,11 @@ echo "Servidor Ollama: $OLLAMA_HOST"
 echo
 
 multipass exec "$VM" -- \
-    env PROJECT_DIR="$PROJECT_DIR" OLLAMA_HOST="$OLLAMA_HOST" \
-    sudo --preserve-env=PROJECT_DIR,OLLAMA_HOST \
+    env PROJECT_DIR="$PROJECT_DIR" AGENT_REMOTE="$AGENT_REMOTE" OLLAMA_HOST="$OLLAMA_HOST" \
+    sudo --preserve-env=PROJECT_DIR,AGENT_REMOTE,OLLAMA_HOST \
     bash -lc '
         exec /home/ubuntu/.local/bin/uv run \
             --project "$PROJECT_DIR" \
             --no-sync \
-            python "$PROJECT_DIR/dangerous_tool_calling.py"
+            python "$AGENT_REMOTE"
     '
