@@ -6,9 +6,9 @@
 
 <kbd>Local-First</kbd> <kbd>Software Libre</kbd> <kbd>Soberanía tecnológica</kbd> <kbd>Control humano</kbd> <kbd>Independencia tecnológica</kbd> <kbd>Comprender antes de memorizar</kbd> <kbd>Pragmatismo</kbd>
 
-`Python` `uv` `Ollama` `Qwen` `BGE-M3` `FastAPI` `Pydantic` `HTTPX` `PostgreSQL` `pgvector` `Docker` `Langfuse` `pytest`
+<kbd>Python</kbd> <kbd>uv</kbd> <kbd>Ollama</kbd> <kbd>Qwen</kbd> <kbd>BGE-M3</kbd> <kbd>FastAPI</kbd> <kbd>Pydantic</kbd> <kbd>HTTPX</kbd> <kbd>PostgreSQL</kbd> <kbd>pgvector</kbd> <kbd>Docker</kbd> <kbd>Langfuse</kbd> <kbd>pytest</kbd>
 
-`LLMs` `SLMs` `Agentes` `RAG` `Embeddings` `Búsqueda semántica` `Structured Outputs` `Prompt Injection` `Guardrails` `Ventana de contexto` `Human-in-the-Loop` `LLMOps` `Alucinaciones`
+<kbd>LLMs</kbd> <kbd>SLMs</kbd> <kbd>Agentes</kbd> <kbd>RAG</kbd> <kbd>Embeddings</kbd> <kbd>Búsqueda semántica</kbd> <kbd>Structured Outputs</kbd> <kbd>Prompt Injection</kbd> <kbd>Guardrails</kbd> <kbd>Ventana de contexto</kbd> <kbd>Human-in-the-Loop</kbd> <kbd>LLMOps</kbd> <kbd>Alucinaciones</kbd>
 
 ---
 
