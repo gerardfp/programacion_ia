@@ -1,0 +1,22 @@
+services:
+  postgres-rag:
+    image: pgvector/pgvector:pg16
+    container_name: ud02-postgres-pgvector
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ceramica_rag
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sql/init_db.sql:/docker-entrypoint-initdb.d/01_init_db.sql:ro
+      - pgdata_ud02:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ceramica_rag"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata_ud02:

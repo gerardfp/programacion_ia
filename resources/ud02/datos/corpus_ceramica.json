@@ -1,0 +1,86 @@
+[
+  {
+    "codigo_doc": "DOC-TEC-01",
+    "titulo": "Serie Marina - Especificaciones de adherencia e impermeabilidad",
+    "fuente": "Ficha_Tecnica_Serie_Marina_2026.pdf",
+    "departamento": "tecnico",
+    "contenido": "Serie Marina (Ref. PAV-904-EXT): Gres porcelánico técnico de masa coloreada con acabado superficial microtexturizado antideslizante Clase C3 según norma UNE-ENV 12633 (pendiente superior al 6%) y coeficiente de absorción de agua inferior al 0,1% (Grupo BIa). Recomendado específicamente para zonas húmedas exteriores, duchas colectivas, terrazas descubiertas y playas de coronación de vasos acuáticos."
+  },
+  {
+    "codigo_doc": "DOC-TEC-02",
+    "titulo": "Serie Pirineos - Comportamiento frente a heladas y choque térmico",
+    "fuente": "Ficha_Tecnica_Serie_Pirineos_2026.pdf",
+    "departamento": "tecnico",
+    "contenido": "Serie Pirineos (Ref. PAV-710-GEL): Pavimento porcelánico espesorado de 20 mm de grosor diseñado para climas de alta montaña. Supera 150 ciclos de hielo-deshielo sin fisuración ni desprendimiento de esmalte hasta temperaturas de -25 °C conforme al ensayo UNE-EN ISO 10545-12. Carga de rotura superior a 10.000 N."
+  },
+  {
+    "codigo_doc": "DOC-TEC-03",
+    "titulo": "Protocolo de colocación, adhesivos y anchura de juntas",
+    "fuente": "Manual_Colocacion_Porcelanico_2026.pdf",
+    "departamento": "tecnico",
+    "contenido": "Para la colocación de gres porcelánico de baja porosidad (absorción < 0,5%) es obligatorio emplear adhesivo cementoso deformable de clasificación C2TE S1 mediante técnica de doble encolado. La junta mínima de colocación será de 2 mm en pavimentos interiores estabilizados y de al menos 5 mm en exteriores o sobre sistemas de calefacción por suelo radiante."
+  },
+  {
+    "codigo_doc": "DOC-TEC-04",
+    "titulo": "Serie Espejo Pulido - Restricciones de uso en zonas húmedas",
+    "fuente": "Ficha_Tecnica_Serie_Espejo_2026.pdf",
+    "departamento": "tecnico",
+    "contenido": "Serie Espejo Pulido (Ref. REV-205-INT): Revestimiento cerámico rectificado con tratamiento de pulido espejo de alto brillo (clasificación de resbaladicidad Clase C0). Uso restringido exclusivamente a paramentos verticales (paredes) y suelos interiores secos de tránsito residencial ligero. Queda terminantemente desaconsejada su instalación en cuartos de baño, cocinas industriales o exteriores por riesgo severo de caída en presencia de agua."
+  },
+  {
+    "codigo_doc": "DOC-COM-01",
+    "titulo": "Tarifa PVP y descuentos comerciales por volumen (Serie Marina)",
+    "fuente": "Tarifa_Comercial_Publica_2026.pdf",
+    "departamento": "comercial",
+    "contenido": "Condiciones comerciales de la Serie Marina (Ref. PAV-904-EXT): El precio oficial de tarifa para clientes y estudios de reforma es de 32,00 EUR/m2 (IVA no incluido). El departamento comercial puede aplicar un descuento comercial máximo del 8% en pedidos cerrados iguales o superiores a 1 palé completo (40 cajas, equivalentes a 57,60 m2)."
+  },
+  {
+    "codigo_doc": "DOC-COM-02",
+    "titulo": "Empaquetado, conversión de cajas y pedido mínimo de fábrica",
+    "fuente": "Condiciones_Generales_Venta_2026.pdf",
+    "departamento": "comercial",
+    "contenido": "Presentación y unidades de venta del formato 60x60 cm rectificado: cada caja indivisible contiene 4 piezas cerámicas que cubren exactamente 1,44 m2 y tiene un peso bruto de 31,5 kg. El pedido mínimo admitido para expedición desde almacén es de 10 cajas (14,40 m2). No se sirven piezas sueltas ni fracciones de caja."
+  },
+  {
+    "codigo_doc": "DOC-COM-03",
+    "titulo": "Plazos de expedición y protocolo de incidencias en transporte",
+    "fuente": "Condiciones_Generales_Venta_2026.pdf",
+    "departamento": "comercial",
+    "contenido": "Plazos de entrega en península: 72 horas laborables para referencias con stock disponible en almacén logístico de Onda. Ante roturas o mermas ocasionadas durante el transporte, el cliente debe dejar constancia escrita en el albarán del transportista en el momento de la descarga y notificar la incidencia con fotografías antes de transcurridas 24 horas."
+  },
+  {
+    "codigo_doc": "DOC-COM-04",
+    "titulo": "Política de envío de muestras y paneles expositores para tiendas",
+    "fuente": "Manual_Red_Ventas_2026.pdf",
+    "departamento": "comercial",
+    "contenido": "Suministro de material promocional: las muestras técnicas cortadas en formato 30x30 cm se envían sin coste de material (solo portes a cargo del solicitante). Los paneles expositores completos para distribuidores tienen un cargo inicial de 150,00 EUR, importe que se abona íntegramente en factura cuando el cliente supera los 500 m2 de compra acumulada anual."
+  },
+  {
+    "codigo_doc": "DOC-GER-01",
+    "titulo": "Estructura confidencial de costes de horno y márgenes reales (Serie Marina)",
+    "fuente": "Informe_Confidencial_Margenes_2026.pdf",
+    "departamento": "gerencia",
+    "contenido": "CONFIDENCIAL - DIRECCIÓN: El coste industrial directo de fabricación en horno de la Serie Marina (Ref. PAV-904-EXT) es de 9,40 EUR/m2, lo que supone un margen bruto en fábrica del 70,6% sobre la tarifa comercial. En operaciones estratégicas de gran volumen (>2.000 m2), Gerencia autoriza de forma interna descuentos confidenciales de hasta el 35% para grandes distribuidores internacionales."
+  },
+  {
+    "codigo_doc": "DOC-GER-02",
+    "titulo": "Contratos de suministro de arcilla atomizada y cobertura de gas natural",
+    "fuente": "Contratos_Aprovisionamiento_Gerencia_2026.pdf",
+    "departamento": "gerencia",
+    "contenido": "CONFIDENCIAL - DIRECCIÓN: El precio pactado con el proveedor de tierras para la pasta blanca atomizada durante el primer semestre de 2026 queda fijado en 48,50 EUR/tonelada puesta en planta. La cobertura financiera de gas natural para los hornos túnel n.º 1 y n.º 2 asegura un coste energético de 34,20 EUR/MWh hasta diciembre."
+  },
+  {
+    "codigo_doc": "DOC-GER-03",
+    "titulo": "Auditoría interna de mermas de rectificado y penalización a proveedor",
+    "fuente": "Auditoria_Calidad_Interna_Q1_2026.pdf",
+    "departamento": "gerencia",
+    "contenido": "CONFIDENCIAL - DIRECCIÓN: El lote interno #2026-B de la línea 3 de rectificado registró una merma por rotura y despunte del 11,4% debido a vibraciones en los cabezales diamantados. Se ha ejecutado la cláusula de penalización confidencial por importe de 42.000 EUR contra el fabricante de la maquinaria."
+  },
+  {
+    "codigo_doc": "DOC-GER-04",
+    "titulo": "Objetivos de EBITDA y plan de incentivos variables del consejo directivo",
+    "fuente": "Acta_Consejo_Administracion_2026.pdf",
+    "departamento": "gerencia",
+    "contenido": "CONFIDENCIAL - DIRECCIÓN: El objetivo de EBITDA consolidado de la planta para el cierre del ejercicio se establece en 4,8 millones de euros (margen EBITDA objetivo del 18,5%). El bono anual variable del equipo de dirección se devengará exclusivamente si la deuda financiera neta se mantiene por debajo de 1,5 veces el EBITDA."
+  }
+]

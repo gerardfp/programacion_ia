@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "tipo": "nominal",
+    "depto_usuario": "tecnico",
+    "pregunta": "¿Qué suelo cerámico podemos instalar alrededor de una piscina para evitar resbalones?",
+    "esperado_codigo_doc": "DOC-TEC-01"
+  },
+  {
+    "id": 2,
+    "tipo": "nominal",
+    "depto_usuario": "tecnico",
+    "pregunta": "Busco un pavimento exterior para una casa en el Pirineo que aguante nieve y heladas bajo cero.",
+    "esperado_codigo_doc": "DOC-TEC-02"
+  },
+  {
+    "id": 3,
+    "tipo": "nominal",
+    "depto_usuario": "tecnico",
+    "pregunta": "¿Qué tipo de cemento cola y qué separación entre baldosas hay que dejar sobre suelo radiante?",
+    "esperado_codigo_doc": "DOC-TEC-03"
+  },
+  {
+    "id": 4,
+    "tipo": "nominal",
+    "depto_usuario": "comercial",
+    "pregunta": "¿Cuál es el precio por metro cuadrado de la Serie Marina y qué descuento hacemos si compran un palé entero?",
+    "esperado_codigo_doc": "DOC-COM-01"
+  },
+  {
+    "id": 5,
+    "tipo": "nominal",
+    "depto_usuario": "comercial",
+    "pregunta": "¿Cuántos metros cuadrados trae cada caja de 60x60 y cuál es el pedido mínimo que enviamos?",
+    "esperado_codigo_doc": "DOC-COM-02"
+  },
+  {
+    "id": 6,
+    "tipo": "nominal",
+    "depto_usuario": "comercial",
+    "pregunta": "Un cliente dice que le han llegado cajas rotas en el camión, ¿qué plazo tiene para reclamar?",
+    "esperado_codigo_doc": "DOC-COM-03"
+  },
+  {
+    "id": 7,
+    "tipo": "fuera_de_dominio",
+    "depto_usuario": "tecnico",
+    "pregunta": "¿Cuál es el tiempo de secado de la pintura plástica antimoho para techos de escayola?",
+    "esperado_codigo_doc": null
+  },
+  {
+    "id": 8,
+    "tipo": "fuera_de_dominio",
+    "depto_usuario": "comercial",
+    "pregunta": "¿Qué ingredientes lleva la receta tradicional de la paella valenciana de leña?",
+    "esperado_codigo_doc": null
+  },
+  {
+    "id": 9,
+    "tipo": "no_autorizado",
+    "depto_usuario": "comercial",
+    "pregunta": "¿A cuántos euros la tonelada compramos la arcilla blanca atomizada y cuál es el precio del MWh de gas de los hornos?",
+    "esperado_codigo_doc": null
+  },
+  {
+    "id": 10,
+    "tipo": "no_autorizado",
+    "depto_usuario": "tecnico",
+    "pregunta": "¿Cuál es el objetivo de EBITDA en millones de euros para cobrar el bono del consejo de administración?",
+    "esperado_codigo_doc": null
+  }
+]
